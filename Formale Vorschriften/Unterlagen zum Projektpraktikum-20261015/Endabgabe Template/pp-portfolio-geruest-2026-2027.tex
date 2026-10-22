@@ -1,0 +1,622 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Die Angaben %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\newcommand{\Semester}{WH 2026-2027}
+\newcommand{\Projekt}{Projekt, Titel des Portfolios}
+\newcommand{\Schwerpunkt}{Ihr Schwerpunktthema}
+\newcommand{\IhrName}{Ihr Name}
+\newcommand{\Matrikelnummer}{Ihre Matrikelnummer}
+\newcommand{\Studiengang}{Ihr Studiengang (Name und Stufe)}
+\newcommand{\emailAdresse}{Ihre e-Mail-Adresse}
+\newcommand{\dasDatum}{Das Datum der Abgabe}
+
+\newcommand{\zubearbeiten}[1]{\textcolor{darkgreen}{#1}}  
+
+%% F\"{u}r Abgaben diesen Kommentar aufheben ("%%" am Anfang l\"{o}schen"
+%\renewcommand{\zubearbeiten}[1]{\textcolor{black}{#1}}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% TeX Front Matter %%%%%%%%%%%%%%%%%%%%%%%%%
+\documentclass[pdftex,12pt,twoside,footsepline,headsepline,a4paper,final]{scrreprt}
+\usepackage[verbose,a4paper,bottom=25mm,top=25mm]{geometry} %showframe,
+\usepackage{scrlayer-scrpage}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{ngerman}
+\usepackage{color}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsthm}
+%%%%%%%%%%%%%%%%%%%%%%%%% Biblatex %%%%%%%%%%%%% eines der beiden unkommentieren wenn benutzt. plus \addbibressource  %%%%%%%%%%%%%%%
+%   \usepackage[sorting=nyt, backend=biber, citestyle=alphabetic, style=alphabetic, autocite=inline, labelalpha=true, hyperref=auto, backref=true]{biblatex}  %%Backend Biber.exe
+%   \usepackage[sorting=nyt, backend=biblatex8, citestyle=alphabetic, style=alphabetic, autocite=inline, labelalpha=true, hyperref=auto, backref=true]{biblatex}  %%Backend Biber.exe
+% \addbibresource{vorlage_bibdatei_fuer_abgabe.bib}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%% bibtex siehe unten %%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\definecolor{darkgreen}{rgb}{0,0.5,0}
+
+\pagestyle{scrheadings}%\clearscrheadfoot
+
+\ihead{\thepage}
+\ohead{\zubearbeiten{\Projekt}}
+\ofoot{\pagemark}
+\ifoot{\zubearbeiten{\IhrName}}
+
+
+
+%-----------------------------------------------------------------------------
+
+
+\begin{document}
+
+\title{Universit\"{a}t Ulm\\\vspace{1cm}
+{\LARGE \textnormal{\textsc{Fakult\"{a}t f\"{u}r Naturwissenschaften}}}\\\vspace{2cm} {\LARGE \textnormal{\textsl{Projektpraktikum \Semester}}}\\\vspace{3cm} \zubearbeiten{\textit{\Projekt}}\\
+{\Large \zubearbeiten{\textit{\Schwerpunkt}}}}
+
+
+\author{{\LARGE \zubearbeiten{\IhrName}}\\ $_{}$\\$_{}$\\\vspace*{1.cm}
+Matrikelnummer:  \zubearbeiten{\Matrikelnummer}\\\vspace{0.8cm} Studiengang: \zubearbeiten{\Studiengang}\\\vspace{1cm} e-Mail: \zubearbeiten{\emailAdresse}}
+
+
+
+\date{\zubearbeiten{\dasDatum}}
+
+
+
+
+\maketitle
+%-----------------------------------------------------------------------------
+
+\tableofcontents
+
+% ----------------------------------------------------------------------------
+
+\chapter{\zubearbeiten{Hinweise zur Arbeit mit dieser Datei}}
+
+\zubearbeiten{Diese Datei soll Ihnen eine Hilfe bei der Erstellung der Endabgabe eines Portfolios sein. Hinweise sind gr\"{u}n gedruckt und sollen durch ihre eigenen Texte ersetzt werden. Dabei sollte die gr\"{u}ne Farbe entfernt werden. Termine finden Sie auf Moodle.}
+
+\zubearbeiten{L\"{a}ngenangaben sind ohne Titel und ohne Abbildungen zu verstehen. Abbildungen verl\"{a}ngern so die notwendige L\"{a}nge. Verwenden Sie eine Schriftgr\"{o}sse von 12 Punkt!
+}
+\vspace*{4 cm}
+
+\zubearbeiten{\large \textbf{F\"{u}r die Abgabe entfernen Sie bitte die gr\"{u}ne Farbe (auch auf der Titelseite) indem Sie in der 15. Zeile das f\"{u}hrende \% entfernen! L\"{o}schen Sie alle Hilfen! Abgaben mit gr\"{u}ner Farbe oder stehen gebliebenen Hilfen ergeben einen Abzug.}}
+
+
+
+\chapter{Einleitung}
+
+\zubearbeiten{In diesem Abschnitt er\"{o}rtern Sie die folgenden Themen (und nicht nur in einem Satz!):}
+
+\begin{itemize}
+\item \zubearbeiten{Motivation f\"{u}r die Wahl Ihres Projektthemas.}
+
+\item \zubearbeiten{Motivation f\"{u}r die Wahl Ihres Schwerpunktthemas innerhalb Ihres Projektthemas.}
+
+\item \zubearbeiten{Wie unterscheidet sich Ihr Projektthema von anderen Themen im aktuellen Semester?}
+
+\item \zubearbeiten{Wie unterscheidet sich Ihr Projektthema von \"{a}hnlichen Themen in fr\"{u}heren Jahren?}
+
+\item \zubearbeiten{Wie unterscheidet sich Ihr Schwerpunktthema von dem des anderen Gruppenmitglieds? (wenn Sie eine Zweiergruppe bilden)}
+
+\item \zubearbeiten{Warum wollen Sie das von Ihnen gew\"{a}hlte Schwerpunktthema bearbeiten?}
+
+\item \zubearbeiten{Was ist der Kontext Ihres Schwerpunktthemas in Ihrem Projekt? }
+
+\item \zubearbeiten{Welche Anregungen hatten Sie?}
+
+\item \zubearbeiten{Was erwarten Sie von der Bearbeitung Ihres Schwerpunktthemas?}
+
+\item \zubearbeiten{Wie steht es mit Ihren Vorkenntnissen in Bezug zum Projektthema?}
+
+\item \zubearbeiten{Wie steht es mit Ihren Vorkenntnissen in Bezug zum Schwerpunktthema?}
+
+\item \zubearbeiten{Gibt es weitere Punkte, die Sie zu Ihren Vorkenntnissen anmerken wollen?}
+
+\item \zubearbeiten{Weitere f\"{u}r Sie wichtige Punkte zu diesem Portfolio.}
+
+\item \zubearbeiten{Vorschau \"{u}ber das Portfolio bestehend aus einer Auflistung der einzelnen     Bestandteile sowie einer kurze Einf\"{u}hrung in deren Inhalte.}
+\end{itemize}
+
+\zubearbeiten{Sie k\"{o}nnen dazu das Motivationsformular (als Anlage beilegen) als Grundlage verwenden.}
+
+\zubearbeiten{\textbf{Die Einleitung ist mindestens zwei Seiten und maximal vier Seiten lang. Die L\"{a}ngenangaben sind ohne Titel, Bilder, Tabellen und Tabellen- oder Bildlegenden zu verstehen.}}
+
+
+
+
+%-----------------------------------------------------------------------------
+
+
+
+\chapter{Hauptteil}
+
+\zubearbeiten{Der Hauptteil besteht aus mindestens sechs Einlagen.}
+
+
+
+
+%-----------------------------------------------------------------------------
+
+
+
+
+
+
+\section{Einlage: Arbeitsplan}
+
+\zubearbeiten{Diese Einlage ist Ihr Arbeitsplan}
+
+\subsection{Beschreibung}
+
+\zubearbeiten{Die Beschreibung gibt alle notwendigen Informationen an, die die Einlage beschreiben, also zum Beispiel den Fundort, die Literaturstelle und eine kurze Inhalts\"{u}bersicht, aber keine Nacherz\"{a}hlung ($1/4$ Seite, max. $1/2$ Seite!).}
+
+\subsection{Reflexion}
+
+\zubearbeiten{In der Reflexion sollen Sie sich Gedanken machen \"{u}ber die Wirkung dieser Einlage und der Arbeit mit ihr auf Ihren Lernfortschritt.}
+
+
+
+ \begin{itemize}
+ \item \zubearbeiten{In welchem Zusammenhang steht der Arbeitsplan zu Ihrem Projektthema?}
+
+ \item \zubearbeiten{In welchem Zusammenhang steht der Arbeitsplan zu Ihrem Schwerpunktthema?}
+
+ \item \zubearbeiten{Was haben Sie bei der Erstellung des Arbeitsplanes gelernt? }
+
+ \item \zubearbeiten{Wie hat Ihnen der Arbeitsplan beim Verst\"{a}ndnis Ihres Projektthemas und Ihres Schwerpunktthemas geholfen?}
+
+ \item \zubearbeiten{Wo gab es Schwierigkeiten bei der Besch\"{a}ftigung mit der Arbeitsplan?}
+
+ \item \zubearbeiten{Was sagen Ihre Kommilitoninnen oder Kommilitonen dazu, als Kommentar oder wenn Sie mit Ihnen \"{u}ber den Arbeitsplan diskutieren?}
+
+ \item \zubearbeiten{Enth\"{a}lt Ihr Arbeitsplan logische oder physikalische Fehler?}
+
+ \item \zubearbeiten{Gab es bei der Besch\"{a}ftigung mit dem Arbeitsplan eine \"{u}berraschende neue Erkenntnis?}
+\end{itemize}
+
+\zubearbeiten{\textbf{Die Reflexion f\"{u}r eine Einlage sollte mindestens eine Seite und maximal 2 Seiten lang sein. Die L\"{a}ngenangaben sind ohne Titel, Bilder, Tabellen und Tabellen- oder Bildlegenden zu verstehen.
+}}
+
+
+%-----------------------------------------------------------------------------
+
+
+
+
+\section{Einlage: Eine wissenschaftliche Arbeit zu einem Teilaspekt Ihres Schwerpunktgebietes}
+
+\zubearbeiten{Diese Einlage muss aus einer begutachteten Fachzeitschrift sein. Sie sollen mit dieser Einlage die professionelle Literaturrecherche lernen.  B\"{u}cher, Konferenzbeitr\"{a}ge, Trade Journals und \"{a}hnliches werden hier nicht akzeptiert.}
+
+\zubearbeiten{Dieser Artikel \textbf{muss} in Ihrer weiteren Arbeit verwendet werden.}
+
+\zubearbeiten{Sie d\"{u}rfen nicht den gleichen Artikel verwenden wie Ihre Partnerin / Ihr Partner.}
+
+\subsection{Beschreibung}
+
+\zubearbeiten{Die Beschreibung gibt alle notwendigen Informationen an, die die Einlage beschreiben, also zum Beispiel den Fundort, die Literaturstelle und eine kurze Inhalts\"{u}bersicht, aber keine Nacherz\"{a}hlung ($1/4$ Seite, max. $1/2$ Seite!).}
+
+
+\subsection{Diskussion der Physik}
+
+\zubearbeiten{Beschreiben Sie hier die Physik dieser Einlage. Fassen Sie den Artikel zusammen. Arbeiten Sie besonders die Physik, die f\"{u}r ihr Schwerpunktthema relavant ist, heraus.}
+
+
+ \begin{itemize}
+ \item \zubearbeiten{Was ist die Hauptaussage der wissenschaftlichen Arbeit?}
+
+ \item \zubearbeiten{Was sind die Voraussetzungen f\"{u}r den Inhalt des Artikels? }
+
+ \item \zubearbeiten{Wie hilft physikalisch die Physik dieser Einlage bei Ihrem Schwerpunktthema?}
+
+ \item \zubearbeiten{Wo gab es Schwierigkeiten beim Verst\"{a}ndnis der Physik? Welche? Mit welcher zus\"{a}tzlichen Literatur haben Sie das Problem gel\"{o}st}
+
+ \item \zubearbeiten{Haben Sie weitere Artikel oder B\"{u}cher konsultiert um das Paper zu verstehen? Welche?}
+
+ \item \zubearbeiten{Welche Aussagen verwenden Sie f\"{u}r Ihr Schwerpunktthema und wo? Warum?}
+
+\end{itemize}
+
+
+\zubearbeiten{\textbf{Die Diskussion der Physik sollte mindestens eine Seite und maximal 3 Seiten lang sein. Die L\"{a}ngenangaben sind ohne Titel, Bilder, Tabellen und Tabellen- oder Bildlegenden und ohne \"{u}bergrosse Abst\"{a}nde zu Gleichungen zu verstehen.
+}}
+
+
+
+\subsection{Reflexion}
+
+\zubearbeiten{In der Reflexion sollen Sie sich Gedanken machen \"{u}ber die Wirkung dieser Einlage und der Arbeit mit ihr auf Ihren Lernfortschritt.}
+\footnote{\zubearbeiten{Akzeptable wissenschaftliche Einlagen sind begutachtete wissenschaftliche Artikel aus wissenschaftlichen Zeitschriften, die Sie \"{u}ber webofknowledge.com oder auch \"{u}ber Google Scholar finden. Erf\"{u}llt die Einlage die Anforderung nicht, wird sie in der Bewertung nicht ber\"{u}cksichtigt. Bei Zweifeln \"{u}ber die Zul\"{a}ssigkeit der beiden Einlagen mit wissenschaftlichen Arbeiten fragen Sie Prof. O. Marti.}}
+
+
+ \begin{itemize}
+ \item \zubearbeiten{In welchem Zusammenhang steht die Einlage mit Ihrem Schwerpunktthema?}
+
+ \item \zubearbeiten{Was haben Sie gelernt? }
+
+ \item \zubearbeiten{Wie hat Ihnen die Einlage beim Verst\"{a}ndnis Ihres Projektes geholfen?}
+
+ \item \zubearbeiten{Wo gab es Schwierigkeiten bei der Besch\"{a}ftigung mit der Einlage?}
+
+ \item \zubearbeiten{H\"{a}tte ein schon bestandenes Modul beim Verst\"{a}ndnis helfen k\"{o}nnen? Welches? Warum oder warum nicht?}
+
+ \item \zubearbeiten{Was haben Sie durch diese Zusatzliteratur gelernt?}
+
+ \item \zubearbeiten{Was h\"{a}tten Sie anders gemacht, wenn Sie die Einlage erstellt h\"{a}tten?}
+
+ \item \zubearbeiten{Was sagen Ihre Kommilitoninnen oder Kommilitonen dazu, als Kommentar oder wenn Sie mit Ihnen \"{u}ber die Einlage diskutieren?}
+
+ \item \zubearbeiten{Haben Sie in dem Artikel der Einlage logische oder physikalische Fehler entdeckt?}
+
+ \item \zubearbeiten{Gab es bei der Besch\"{a}ftigung mit der Einlage eine \"{u}berraschende neue Erkenntnis?}
+\end{itemize}
+
+\zubearbeiten{\textbf{Die Reflexion f\"{u}r eine Einlage sollte mindestens eine Seite und maximal 2 Seiten lang sein. Die L\"{a}ngenangaben sind ohne Titel, Bilder, Tabellen und Tabellen- oder Bildlegenden zu verstehen.
+}}
+
+
+
+%-----------------------------------------------------------------------------
+
+
+
+
+\section{Einlage: Alle Originalseiten ihres Protokolls eines Praktikumstages.}
+
+
+\zubearbeiten{Diese Einlage muss aus Ihrem elektronischen Laborjournal sein. Sie verwenden alles was Sie an dem gew\"{a}hlten Tag aufgeschrieben haben. Sie geben den Link zu Ihrem Laborbucheintrag an.}
+
+\zubearbeiten{Verwenden Sie nicht den gleichen Tag wie Ihre Partnerin / Ihr Partner. Machen Sie sich Gedanken \"{u}ber die folgenden Fragen:     Was ist ein gutes Protokoll? Ein gutes Protokoll enth\"{a}lt alle Informationen (Gleichungen, Literaturhinweise, Handlungsanweisungen, Schaltpl\"{a}ne, Konstruktionszeichnungen, usw.) die notwendig ist, dass eine andere Person mit Ihrem Bildungsstand, aber ohne weitere Verbindungen zu Ihnen, Ihre Experimente oder Rechnungen wiederholen kann und Ihre Ergebnisse bewerten kann. }
+
+\zubearbeiten{Diese Einlage ist keine Nacherz\"{a}hlung Ihrer Arbeiten an einem Praktikunstag, sondern eine Analyse Ihrer Dokumentation Ihrer Arbeiten.}
+
+\subsection{Beschreibung}
+
+\zubearbeiten{Die Beschreibung gibt alle notwendigen Informationen an, die die Einlage beschreiben, also zum Beispiel das Datum, die Art des Laborjournals und eine kurze Inhalts\"{u}bersicht, aber keine Nacherz\"{a}hlung ($1/4$ Seite, max. $1/2$ Seite!).}
+
+\subsection{Reflexion}
+
+\zubearbeiten{In der Reflexion sollen Sie sich Gedanken machen \"{u}ber die Wirkung dieser Einlage und der Arbeit mit ihr auf Ihren Lernfortschritt.}
+
+
+ \begin{itemize}
+ \item \zubearbeiten{In welchem Zusammenhang steht die Einlage mit Ihrem Schwerpunktthema und Ihrem Projektthema?}
+
+ \item \zubearbeiten{Verstehen Sie noch Ihren Notizen?}
+
+ \item \zubearbeiten{Was haben Sie bei der Erstellung dieser Einlage gelernt? }
+
+ \item \zubearbeiten{Wie hat Ihnen die Einlage beim Verst\"{a}ndnis Ihres Projektthemas geholfen?}
+
+ \item \zubearbeiten{Wo gab es Schwierigkeiten bei der Besch\"{a}ftigung mit der Einlage?}
+
+ \item \zubearbeiten{Was w\"{u}nschen sie sich von Ihren Notizen beim erneuten Lesen?}
+
+ \item \zubearbeiten{Was h\"{a}tten Sie anders gemacht, wenn Sie die Einlage nochmals erstellen m\"{u}ssten?}
+
+ \item \zubearbeiten{Was sagen Ihre Kommilitoninnen oder Kommilitonen dazu, als Kommentar oder wenn Sie mit Ihnen \"{u}ber die Einlage diskutieren?}
+
+ \item \zubearbeiten{Haben Sie in Ihrem Protokoll logische oder physikalische Fehler entdeckt?}
+
+ \item \zubearbeiten{Gab es bei der Besch\"{a}ftigung mit der Einlage eine \"{u}berraschende neue Erkenntnis?}
+\end{itemize}
+
+\zubearbeiten{\textbf{Die Reflexion f\"{u}r eine Einlage sollte mindestens eine Seite und maximal 2 Seiten lang sein. Die L\"{a}ngenangaben sind ohne Titel, Bilder, Tabellen und Tabellen- oder Bildlegenden zu verstehen.
+}}
+
+
+%-----------------------------------------------------------------------------
+
+
+
+
+\section{Einlage:  Eines Ihrer Ergebnisse (Messung oder Berechnung).}
+
+
+\zubearbeiten{Hier nehmen Sie ein von Ihnen gemessenes Resultat (Rohdaten, Auswerteformeln und die ausgewerteten Daten und Grafiken) und diskutieren es.}
+
+\subsection{Beschreibung}
+
+\zubearbeiten{Die Beschreibung gibt alle notwendigen Informationen an, die die Einlage beschreiben, also zum Beispiel das Datum, die Art der Messung und eine kurze Inhalts\"{u}bersicht, aber keine Nacherz\"{a}hlung (min. $1/4$ Seite bis max. $1/2$ Seite!).}
+
+
+\subsection{Diskussion der Physik}
+
+\zubearbeiten{Beschreiben Sie hier die Physik dieser Einlage. }
+
+
+ \begin{itemize}
+ \item \zubearbeiten{Was haben Sie gemessen oder berechnet?}
+
+ \item \zubearbeiten{Was ist die Hauptaussage?}
+
+ \item \zubearbeiten{Was sind die Voraussetzungen f\"{u}r Ihre Messung? }
+
+ \item \zubearbeiten{Welches sind Ihre Auswerteformeln? }
+
+ \item \zubearbeiten{Was tr\"{a}gt ihre \textbf{wissenschaftliche Arbeit} zur Argumentation  bei?}
+
+ \item \zubearbeiten{Welche Physik dieser Einlage ist bei Ihrem Schwerpunktthema anwendbar?}
+
+ \item \zubearbeiten{Wo gab es Schwierigkeiten beim Verst\"{a}ndnis der Physik? Welche?}
+
+ \item \zubearbeiten{Wie haben Sie Ihr Paper aus der Einlage \flqq Eine wissenschaftliche Arbeit\frqq{} f\"{u}r diese Einlage verwendet? Warum? Wo? }
+
+ \item \zubearbeiten{Stimmen Ihre Ergebnisse mit den Aussagen aus dem Paper \"{u}berein?}
+
+
+\end{itemize}
+
+
+\zubearbeiten{\textbf{Die Diskussion der Physik sollte mindestens eine Seite und maximal 3 Seiten lang sein.  Die L\"{a}ngenangaben sind ohne Titel, Bilder, Tabellen und Tabellen- oder Bildlegenden und ohne \"{u}bergrosse Abst\"{a}nde zu Gleichungen zu verstehen. Ich werde gegebenenfalls Ihre Auswertung anhand der beigelegten Daten \"{u}berpr\"{u}fen.
+}}
+
+
+
+\subsection{Reflexion}
+
+\zubearbeiten{In der Reflexion sollen Sie sich Gedanken machen \"{u}ber die Wirkung dieser Einlage und der Arbeit mit ihr auf Ihren Lernfortschritt.}
+
+
+ \begin{itemize}
+ \item \zubearbeiten{In welchem Zusammenhang steht die Einlage mit Ihrem Schwerpunktthema?}
+
+ \item \zubearbeiten{Was haben Sie bei der Erstellung dieser Einlage gelernt? }
+
+ \item \zubearbeiten{Wie hat Ihnen die Einlage beim Verst\"{a}ndnis Ihres Projektthemas geholfen?}
+
+ \item \zubearbeiten{Wo gab es Schwierigkeiten bei der Besch\"{a}ftigung mit der Einlage?}
+
+ \item \zubearbeiten{Was h\"{a}tten Sie anders gemacht, wenn Sie die Einlage nochmals erstellen m\"{u}ssten?}
+
+ \item \zubearbeiten{Was sagen Ihre Kommilitoninnen oder Kommilitonen dazu, als Kommentar oder wenn Sie mit Ihnen \"{u}ber die Einlage diskutieren?}
+
+ \item \zubearbeiten{Haben Sie in der Durchf\"{u}hrung oder Auswertung der Messung logische oder physikalische Fehler entdeckt?}
+
+ \item \zubearbeiten{Gab es bei der Besch\"{a}ftigung mit der Einlage eine \"{u}berraschende neue Erkenntnis?}
+\end{itemize}
+
+\zubearbeiten{\textbf{Die Reflexion f\"{u}r eine Einlage sollte mindestens eine Seite und maximal 2 Seiten lang sein.  Die L\"{a}ngenangaben sind ohne Titel, Bilder, Tabellen und Tabellen- oder Bildlegenden zu verstehen.
+}}
+
+
+
+
+%-----------------------------------------------------------------------------
+
+
+\section{Einlage:  Ihr Vortrag \"{u}ber ihr Projekt.}
+
+
+\zubearbeiten{Hier nehmen Sie die von Ihnen erstellten und pr\"{a}sentierten Folien des Projektvortrages und diskutieren sie.}
+
+\subsection{Beschreibung}
+
+\zubearbeiten{Die Beschreibung gibt alle notwendigen Informationen an, die die Einlage beschreiben, also zum Beispiel das Datum, die Art der Folien, die verwendete Software und eine kurze Inhalts\"{u}bersicht, aber keine Nacherz\"{a}hlung (min. $1/4$ Seite, max. $1/2$ Seite!).}
+
+\subsection{Reflexion}
+
+\zubearbeiten{In der Reflexion sollen Sie sich Gedanken machen \"{u}ber die Wirkung dieser Einlage und der Arbeit mit ihr auf Ihren Lernfortschritt.}
+
+
+ \begin{itemize}
+ \item \zubearbeiten{In welchem Zusammenhang steht die Einlage mit Ihrem Projektthema?}
+
+ \item \zubearbeiten{In welchem Zusammenhang steht die Einlage mit Ihrem Schwerpunktthema?}
+
+ \item \zubearbeiten{Was haben Sie bei der Erstellung dieser Einlage gelernt? }
+
+ \item \zubearbeiten{Wie bewerten sie die Zusammenarbeit in Ihrer Gruppe?}
+
+ \item \zubearbeiten{Wie hat Ihnen die Einlage beim Verst\"{a}ndnis Ihres Projektthemas geholfen?}
+
+ \item \zubearbeiten{Wie hat ihre \textbf{wissenschaftliche Arbeit} zur Argumentation  beigetragen?}
+
+ \item \zubearbeiten{Wie hat Ihnen die Einlage beim Verst\"{a}ndnis Ihres Schwerpunktthemas geholfen?}
+
+ \item \zubearbeiten{Wo gab es Schwierigkeiten bei der Besch\"{a}ftigung mit der Einlage?}
+
+ \item \zubearbeiten{Was h\"{a}tten Sie anders gemacht, wenn Sie die Einlage nochmals erstellen m\"{u}ssten?}
+
+ \item \zubearbeiten{Was sagen Ihre Kommilitoninnen oder Kommilitonen dazu, als Kommentar oder wenn Sie mit Ihnen \"{u}ber die Einlage diskutieren?}
+
+ \item \zubearbeiten{Enth\"{a}lt Ihre Pr\"{a}sentation logische oder physikalische Fehler?}
+
+ \item \zubearbeiten{Gab es bei der Besch\"{a}ftigung mit der Einlage eine neue Erkenntnis?}
+\end{itemize}
+
+\zubearbeiten{\textbf{Die Reflexion f\"{u}r eine Einlage sollte mindestens eine Seite und maximal 2 Seiten lang sein.  Die L\"{a}ngenangaben sind ohne Titel, Bilder, Tabellen und Tabellen- oder Bildlegenden zu verstehen.
+}}
+
+
+
+
+%-----------------------------------------------------------------------------
+
+
+
+
+\section{Einlage: Eine quantitative wissenschaftliche Aussage aus einem anderen Vortrag, die f\"{u}r Ihr Projekt eine Relevanz hat oder anwendbar ist.}
+
+\zubearbeiten{Die Quelle dieser Einlage oder die Art der Einlage ist aus den von Ihnen geh\"{o}rten Vortr\"{a}gen (ausser dem eigenen) frei w\"{a}hlbar. Sie muss mit Ihrem Schwerpunktthema einen Zusammenhang haben.}
+
+\subsection{Beschreibung}
+
+\zubearbeiten{Die Beschreibung gibt alle notwendigen Informationen an, die die Einlage beschreiben, also zum Beispiel die Gruppe, die den Vortrag gehalten hat, das Thema dieser Gruppe und eine kurze Inhalts\"{u}bersicht, aber keine Nacherz\"{a}hlung (min. $1/4$ Seite, max. $1/2$ Seite!).}
+
+
+\subsection{Diskussion der quantitativen Physik (oder der Mathematik)}
+
+%\zubearbeiten{Wenn Sie f\"{u}r diese Einlage eine mathematische oder physikalische Aussage gew\"{a}hlt haben,  beschreiben Sie hier die Physik oder Mathematik dieser Einlage.}
+
+
+ \begin{itemize}
+ \item \zubearbeiten{Was ist die Hauptaussage?}
+
+ \item \zubearbeiten{Was sind die Voraussetzungen? }
+
+ \item \zubearbeiten{Wie hilft physikalisch die Physik (Mathematik oder Wissenschaft) dieser Einlage bei Ihrem Schwerpunktthema?}
+     
+ \item \zubearbeiten{Welche quantitativen Aussagen unterlegt mit physikalischen Gleichungen sind f\"{u}r Sie besonders wichtig?}
+
+ \item \zubearbeiten{Wo gab es Schwierigkeiten beim Verst\"{a}ndnis der Physik (Mathematik oder Wissenschaft)? Welche?}
+
+ \item \zubearbeiten{Wie k\"{o}nnen Sie mit dieser Aussage Ihr Projekt und Ihre Behandlung des Schwerpunktthemas verbessern oder korrigieren? Welchen Einfluss h\"{a}tte dies?}
+
+\end{itemize}
+
+
+\zubearbeiten{\textbf{Die Diskussion der Physik sollte mindestens eine Seite und maximal 3 Seiten lang sein.  Die L\"{a}ngenangaben sind ohne Titel, Bilder, Tabellen und Tabellen- oder Bildlegenden und ohne \"{u}bergrosse Abst\"{a}nde zu Gleichungen zu verstehen.
+}}
+
+
+
+\subsection{Reflexion}
+
+
+\zubearbeiten{In der Reflexion sollen Sie sich Gedanken machen \"{u}ber die Wirkung dieser Einlage und der Arbeit mit ihr auf Ihren Lernfortschritt.}
+
+
+ \begin{itemize}
+ \item \zubearbeiten{In welchem Zusammenhang steht die Einlage mit Ihrem Projektthema?}
+
+ \item \zubearbeiten{In welchem Zusammenhang steht die Einlage mit Ihrem Schwerpunktthema?}
+
+ \item \zubearbeiten{Was haben Sie bei der Besch\"{a}ftigung mit dieser Einlage gelernt?}
+
+ \item \zubearbeiten{Wie hat Ihnen die Einlage beim Verst\"{a}ndnis Ihres Schwerpunktthemas geholfen?}
+
+ \item \zubearbeiten{Wo gab es Schwierigkeiten bei der Besch\"{a}ftigung mit der Einlage?}
+
+ \item \zubearbeiten{Was h\"{a}tten Sie anders gemacht, wenn Sie die Einlage erstellt h\"{a}tten?}
+
+ \item \zubearbeiten{Was sagen Ihre Kommilitoninnen oder Kommilitonen dazu, als Kommentar oder wenn Sie mit Ihnen \"{u}ber die Einlage diskutieren?}
+
+ \item \zubearbeiten{Enth\"{a}lt die die verwendete Aussage logische oder physikalische Fehler?}
+
+ \item \zubearbeiten{Gab es bei der Besch\"{a}ftigung mit der Einlage eine \"{u}berraschende neue Erkenntnis?}
+\end{itemize}
+
+\zubearbeiten{\textbf{Die Reflexion f\"{u}r eine Einlage sollte mindestens eine Seite und maximal 2 Seiten lang sein.  Die L\"{a}ngenangaben sind ohne Titel, Bilder, Tabellen und Tabellen- oder Bildlegenden zu verstehen.
+}}
+
+
+
+
+%-----------------------------------------------------------------------------
+
+
+\section{\zubearbeiten{Freiwillig: weitere Einlagen}}
+
+\zubearbeiten{Sie k\"{o}nnen eine beliebige Anzahl (>0) weiterer Einlagen zu Ihrem Schwerpunktthema einreichen. Die Struktur ist die gleiche wie bei den sechs Pflichteinlagen.}
+
+
+
+
+%-----------------------------------------------------------------------------
+
+
+
+
+\chapter{Gesamtreflexion}
+
+\zubearbeiten{In der Gesamtreflexion\cite{DK2008} \"{u}berdenken Sie nochmals die Vorlesung und Ihr Portfolio. Sie sollten als Ausgangspunkt Ihrer \"{U}berlegungen Ihr am Anfang ausgef\"{u}lltes Motivationsformular verwenden\footnote{Das Motivationsformular wird einer der Anh\"{a}nge!}. Sie sollten auf folgendes  eingehen:}
+
+
+\begin{itemize}
+ \item \zubearbeiten{Welche Erkenntnisse haben Sie aus den Portfolioeinlagen zu Ihrem Projekt gewonnen?}
+
+ \item \zubearbeiten{Welche Erkenntnisse haben Sie zum Schwerpunktthema gewonnen?}
+
+ \item \zubearbeiten{Was haben Sie zu Ihrer Art zu Lernen gelernt? Was war f\"{o}rderlich oder hinderlich?}
+
+ \item \zubearbeiten{Wie hat die Portfolioarbeit Ihre Arbeitsorganisation beeinflusst?}
+
+ \item \zubearbeiten{Was haben Sie an Allgemeinwissen dazugewonnen?}
+
+ \item \zubearbeiten{Was haben Sie \"{u}ber sich selber gelernt?}
+
+ \item \zubearbeiten{Wie beurteilen Sie Ihre Interaktion mit den Kommilitoninnen und Kommilitonen bei der Portfolioerstellung?}
+
+ \item \zubearbeiten{Wie beurteilen Sie ihren Studien-/Lernerfolg? Wie lautet ihre  mit kritischer Bewertung? Welche Schl\"{u}sse ziehen Sie f\"{u}r Ihre weitere wissenschaftliche Bildung?}
+
+ \item \zubearbeiten{Welche Konsequenzen ziehen Sie aus den neu gewonnenen Erkenntnissen?}
+
+ \item \zubearbeiten{Welche \textbf{neue individuell bedeutsame  Fragestellung} (oder Fragestellungen)  habt sich aus den neu gewonnenen Erkenntnissen ergeben?}
+
+ \item \zubearbeiten{Was sind Ihre n\"{a}chsten Schritte zur Auseinandersetzung mit den neu gewonnenen Fragestellungen?}
+
+ \item \zubearbeiten{Was ist Ihr Fazit?}
+\end{itemize}
+
+
+\zubearbeiten{Bitte schreiben Sie Ihren Text so, dass die geforderten Aussagen identifizierbar sind! Antworten aus nur einem Satz sind meistens schwer bis unverst\"{a}ndlich.}
+
+
+\zubearbeiten{\textbf{Die Gesamtreflexion sollte mindestens drei Seiten und maximal sechs Seiten lang sein.  Die L\"{a}ngenangaben sind ohne Titel, Bilder, Tabellen und Tabellen- oder Bildlegenden zu verstehen.}}
+
+
+
+
+%-----------------------------------------------------------------------------
+
+\def\bibname{Referenzen und Literaturverzeichnis}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% auskommentieren f\"{u}r biblatex, lassen f\"{u}r bibtex und \bibitem  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\bibliographystyle{amsplain}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% ende Auskommentieren %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\addcontentsline{toc}{chapter}{Referenzen und Literaturverzeichnis}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Wenn bibtex oder biblatex verwendet bitte auskommentieren bis zur n\"{a}chsten Linie
+
+\begin{thebibliography}{99}
+\bibitem{DK2008}\textcolor{darkgreen}{\textbf{Degenhardt, Marion und Karagiannakis, Evangelia.} Lerntagebuch, Arbeitsjournal und Portfolio. Drei S\"{a}ulen eines pers\"{o}nlichen Lernprozess - Begleiters. Neues Handbuch Hochschullehre NHHL 2 34 0808 . 2008, S. C 2.13, S 1-41.}
+\end{thebibliography}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%% bis hier auskommentieren %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%% bibtex  bitte kommentierung aufheben %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\bibliography{vorlage_bibdatei_fuer_abgabe}
+%%%%%%%%%%%%%%%%%%%%%%%% ende bibtex %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%% biblatex %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\printbibliography
+%%%%%%%%%%%%%%%%%%%%% ende biblatex %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\textcolor{darkgreen}{Ein Literaturverzeichnis enth\"{a}lt auch Hinweise auf Hilfen, Texte, Grafiken, Aussagen von anderen Menschen, z.B. von Mitstudierenden! (Alles was Sie \"{u}bernommen haben!)
+}
+
+$_{}$
+\\
+
+\textcolor{darkgreen}{Mit Jabref oder Citavi k\"{o}nnen Sie Ihre Literaturliste pflegen!}
+
+
+$_{}$
+\\ \indent
+
+\textcolor{darkgreen}{In dieses Verzeichnis geh\"{o}ren neben korrekt zitierten Literaturstellen (nicht die Webadresse) auch alle anderen Verweise wie auf Aussagen von anderen Personen, Webstellen, die verwendet wurden, und was immer sonst nicht auf Ihrem Mist gewachsen ist.}
+
+
+%-----------------------------------------------------------------------------
+
+
+
+\appendix 
+
+\chapter*{Anh\"{a}nge}
+\addcontentsline{toc}{chapter}{Anh\"{a}nge}
+
+
+\textcolor{darkgreen}{Hier kommen Ihre Anh\"{a}nge hin. Das ist das Motivationsformular, alle Einlagen zu den sechs Pflichtabgaben sowie weitere Materialien nach Ihrer Wahl. Die einzelnen Anh\"{a}nge sollten mit \textbackslash chapter\{welcher Anhang\} betitelt werden!}
+
+
+\chapter{\textcolor{darkgreen}{Beispiel Anhang zur Einlage x}}
+
+
+\chapter{\textcolor{darkgreen}{Beispiel Anhang zur Einlage y}}
+
+
+
+\end{document}
+
+% -----------------------------------------------------------------------------

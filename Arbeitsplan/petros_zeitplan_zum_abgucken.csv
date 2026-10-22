@@ -1,0 +1,35 @@
+# Zeitplan Projektpraktikum (Team-Zeitplan aus Zeitplan.ods, Stand 19.10.2026) — HIER bearbeiten.
+# Danach in VS Code: ⌘⇧P → "Tasks: Run Task" → "Projektpraktikum: Zeitplan aktualisieren"
+#   → labor/Zeitplan.pdf (zum Ausdrucken) + plots/zeitplan.pdf (im Planungsdokument, Kapitel Zeitplanung)
+# art:      phase (Balken von–bis) · abgabe (Raute am Datum) · pause
+# wer:      Petros · Tobi · Beide · Anmeldung (Hochschulportal, jeder selbst) · Pause
+# von, bis: TT.MM.JJJJ (bei Abgaben nur "von"); bis = letzter Tag einschließlich
+# erledigt: ja/nein → Häkchen auf Seite 2 des PDFs
+art,aufgabe,wer,von,bis,erledigt
+phase,Herleitung Zeeman,Tobi,15.10.2026,21.10.2026,nein
+phase,Konzept Experiment,Petros,15.10.2026,21.10.2026,nein
+phase,Identifikation Spektrallinien,Tobi,22.10.2026,04.11.2026,nein
+phase,Aufträge Werkstatt,Petros,22.10.2026,28.10.2026,nein
+phase,Lampe Referenz,Petros,29.10.2026,04.11.2026,nein
+phase,Spektrometer Aufbau,Petros,05.11.2026,11.11.2026,nein
+phase,Recherche existierende Datensätze,Petros,12.11.2026,25.11.2026,nein
+phase,Auswertung existierende Datensätze,Tobi,19.11.2026,02.12.2026,nein
+phase,Auswertung Referenzmessung,Tobi,03.12.2026,16.12.2026,nein
+phase,Anpassungen Spektrometer,Petros,31.12.2026,13.01.2027,nein
+phase,Auswertung II Referenzmessung,Tobi,07.01.2027,13.01.2027,nein
+phase,Aufbau mit Teleskop,Petros,14.01.2027,07.02.2027,nein
+phase,Auswertung Teleskop,Tobi,21.01.2027,07.02.2027,nein
+phase,Auswertung und Einordnung,Beide,28.01.2027,15.03.2027,nein
+pause,Winterpause,Pause,17.12.2026,30.12.2026,nein
+abgabe,Motivationsformular,Beide,21.10.2026,,nein
+abgabe,Arbeitsplan + Reflexion,Beide,28.10.2026,,nein
+abgabe,Paper + Reflexion,Beide,11.11.2026,,nein
+abgabe,Protokoll Praktikumstag,Beide,09.12.2026,,nein
+abgabe,Messergebnis,Beide,20.01.2027,,nein
+abgabe,Anmeldung mündlich (Portal),Anmeldung,23.01.2027,,nein
+abgabe,Vortragsfolien,Beide,27.01.2027,,nein
+abgabe,Vortrag,Beide,28.01.2027,,nein
+abgabe,Vortrag Reflexion,Beide,07.02.2027,,nein
+abgabe,Vortrag andere Aussage,Beide,21.02.2027,,nein
+abgabe,Anmeldung schriftlich (Portal),Anmeldung,10.03.2027,,nein
+abgabe,Endabgabe Portfolio,Beide,15.03.2027,,nein

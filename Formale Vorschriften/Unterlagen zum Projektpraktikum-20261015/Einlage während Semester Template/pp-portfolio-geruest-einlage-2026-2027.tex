@@ -1,0 +1,211 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Die Angaben %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\newcommand{\Semester}{WH 2026-2027}
+\newcommand{\Projekt}{Projekt, Titel des Portfolios}
+\newcommand{\Schwerpunkt}{Ihr Schwerpunktthema}
+\newcommand{\dieEinlage}{Titel der Einlage}
+\newcommand{\IhrName}{Ihr Name}
+\newcommand{\Matrikelnummer}{Ihre Matrikelnummer}
+\newcommand{\Studiengang}{Ihr Studiengang (Name und Stufe)}
+\newcommand{\emailAdresse}{Ihre e-Mail-Adresse}
+\newcommand{\dasDatum}{Das Datum der Abgabe}
+
+\newcommand{\zubearbeiten}[1]{\textcolor{darkgreen}{#1}}
+
+%% F\"{u}r Abgaben diesen Kommentar aufheben ("%%" am Anfang l\"{o}schen"
+%\renewcommand{\zubearbeiten}[1]{\textcolor{black}{#1}}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% TeX Front Matter %%%%%%%%%%%%%%%%%%%%%%%%%
+\documentclass[pdftex,12pt,twoside,footsepline,headsepline,a4paper,final]{scrreprt}
+\usepackage[verbose,a4paper,bottom=25mm,top=25mm]{geometry} %showframe,
+\usepackage{scrlayer-scrpage}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{ngerman}
+\usepackage{color}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsthm}
+%%%%%%%%%%%%%%%%%%%%%%%%% Biblatex %%%%%%%%%%%%% eines der beiden unkommentieren wenn benutzt. plus \addbibressource  %%%%%%%%%%%%%%%
+%   \usepackage[sorting=nyt, backend=biber, citestyle=alphabetic, style=alphabetic, autocite=inline, labelalpha=true, hyperref=auto, backref=true]{biblatex}  %%Backend Biber.exe
+%   \usepackage[sorting=nyt, backend=biblatex8, citestyle=alphabetic, style=alphabetic, autocite=inline, labelalpha=true, hyperref=auto, backref=true]{biblatex}  %%Backend Biber.exe
+% \addbibresource{vorlage_bibdatei_fuer_abgabe.bib}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%% bibtex siehe unten %%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\definecolor{darkgreen}{rgb}{0,0.5,0}
+
+\pagestyle{scrheadings}%\clearscrheadfoot
+
+\ihead{\thepage}
+\ohead{\zubearbeiten{\Projekt{} - \Schwerpunkt}}
+\ofoot{\pagemark}
+\ifoot{\zubearbeiten{\IhrName}}
+
+
+
+%-----------------------------------------------------------------------------
+
+
+\begin{document}
+
+\title{Universit\"{a}t Ulm\\\vspace{1cm}
+{\LARGE \textnormal{\textsc{Fakult\"{a}t f\"{u}r Naturwissenschaften}}}\\\vspace{2cm} {\LARGE \textnormal{\textsl{Projektpraktikum \Semester}}}\\\vspace{2cm} {\LARGE\zubearbeiten{\textit{\Projekt}}}\\
+{\Large \zubearbeiten{\textit{\Schwerpunkt}}}\\\vspace{0.5cm} \zubearbeiten{\textit{\dieEinlage}}}
+
+
+\author{{\LARGE \zubearbeiten{\IhrName}}\\ $_{}$\\$_{}$\\\vspace*{1.cm}
+Matrikelnummer:  \zubearbeiten{\Matrikelnummer}\\\vspace{0.8cm} Studiengang: \zubearbeiten{\Studiengang}\\\vspace{0.4cm} e-Mail: \zubearbeiten{\emailAdresse}}
+
+
+
+\date{\zubearbeiten{\dasDatum}}
+
+
+
+\maketitle
+%-----------------------------------------------------------------------------
+
+\tableofcontents
+
+% ----------------------------------------------------------------------------
+
+\chapter{\zubearbeiten{Hinweise zur Arbeit mit dieser Datei}}
+
+\zubearbeiten{Diese Datei soll Ihnen eine Hilfe bei der Erstellung der Endabgabe eines Portfolios sein. Hinweise sind gr\"{u}n gedruckt und sollen durch ihre eigenen Texte ersetzt werden. Dabei sollte die gr\"{u}ne Farbe entfernt werden. Termine finden Sie auf Moodle.}
+
+\zubearbeiten{L\"{a}ngenangaben sind ohne Titel und ohne Abbildungen zu verstehen. Abbildungen verl\"{a}ngern so die notwendige L\"{a}nge. Verwenden Sie eine Schriftgr\"{o}sse von 12 Punkt!
+}
+\vspace*{4 cm}
+
+\zubearbeiten{\large \textbf{F\"{u}r die Abgabe entfernen Sie bitte die gr\"{u}ne Farbe (auch auf der Titelseite) indem Sie in der 16. Zeile das f\"{u}hrende \% entfernen! L\"{o}schen Sie alle Hilfen! Abgaben mit gr\"{u}ner Farbe oder stehen gebliebenen Hilfen ergeben einen Abzug.}}
+
+
+
+
+%-----------------------------------------------------------------------------
+
+
+
+\chapter{Hauptteil}
+
+
+
+
+
+%-----------------------------------------------------------------------------
+
+
+
+\section{Einlage: \zubearbeiten{Welche Einlage}}
+
+\zubearbeiten{Beachten Sie die Hinweise in der Datei mit dem Ger\"{u}st f\"{u}r die Endabgabe! Auch bei einer Zwischenabgabe ist eine korrekte Literaturarbeit notwendig.}
+
+\subsection{Beschreibung}
+
+\zubearbeiten{Die Beschreibung gibt alle notwendigen Informationen an, die die Einlage beschreiben, also zum Beispiel den Fundort, die Literaturstelle und eine kurze Inhalts\"{u}bersicht, aber keine Nacherz\"{a}hlung ($1/4$ Seite, max. $1/2$ Seite!).}
+
+
+\subsection{Diskussion der Physik}
+
+\zubearbeiten{F\"{u}r die Einlagen \glqq Literaturstelle\grqq, \glqq Eine Messung\grqq{} und \glqq Eine Aussage aus einem anderen Vortrag\grqq{} beschreiben Sie die in der Einlage vorkommende Physik. F\"{u}r die Einlage \glqq Eine wissenschaftliche Aussage aus einem anderen Vortrag\grqq{} steht Physik auch f\"{u}r die Mathematik oder die sonstige verwendete Wissenschaft.}
+
+$_{}$
+
+\begin{Large}
+  \zubearbeiten{Bitte schauen Sie in der Datei \flqq pp-portfolio-geruest-2026-2027.tex\frqq{} und in Moodle bei den einzelnen Abgaben die genauen \textbf{Anforderungen} f\"{u}r die jeweilige Einlage nach.}
+\end{Large}
+
+$_{}$
+
+\textcolor{darkgreen}{\textbf{Die Diskussion der Physik (Einlagen \emph{wissenschaftliche Arbeit, eines Ihrer Ergebnisse, Eine wissenschaftliche Aussage aus einem anderen Vortrag, die f\"{u}r Ihr Projekt eine Relevanz hat oder anwendbar ist}) sollte mindestens eine Seite und maximal 3 Seiten lang sein.  Die L\"{a}ngenangaben sind ohne Titel, Bilder, Tabellen und Tabellen- oder Bildlegenden und ohne \"{u}bergrosse Abst\"{a}nde zu Gleichungen zu verstehen.
+}}
+
+
+\subsection{Reflexion}
+
+\textcolor{darkgreen}{In der Reflexion sollen Sie sich Gedanken machen \"{u}ber die Arbeit mit dieser Einlage und ihre Wirkung auf Ihren Lernfortschritt.}\footnote{\textcolor{darkgreen}{Akzeptable  Einlagen f\"{u}r die Einlage Literaturstelle sind begutachtete wissenschaftliche Artikel aus wissenschaftlichen Zeitschriften, die Sie \"{u}ber webofknowledge.com oder auch \"{u}ber Google Scholar finden. Erf\"{u}llt die Einlage die Anforderung nicht, wird sie in der Bewertung nicht ber\"{u}cksichtigt. Bei Zweifeln \"{u}ber die Zul\"{a}ssigkeit der beiden Einlagen mit wissenschaftlichen Arbeiten fragen Sie Prof. O. Marti.}}
+
+$_{}$
+
+\begin{Large}
+  \textcolor{darkgreen}{Bitte schauen Sie in der Datei \flqq pp-portfolio-geruest-2026-2027.tex\frqq{} und in Moodle bei den einzelnen Abgaben die genauen \textbf{Anforderungen} f\"{u}r die jeweilige Einlage nach.}
+\end{Large}
+
+$_{}$
+
+\textcolor{darkgreen}{\textbf{Die Reflexion f\"{u}r eine Einlage sollte mindestens eine Seite und maximal 2 Seiten lang sein.  Die L\"{a}ngenangaben sind ohne Titel, Bilder, Tabellen und Tabellen- oder Bildlegenden zu verstehen.
+}}
+
+\textcolor{darkgreen}{\textbf{Denken Sie daran, dass Sie alle Hinweise im Text auf andere Werke (Artikel, B\"{u}cher, Bilder, Grafiken) aber auch alle Erw\"{a}hnungen von Meinungen anderer Personen mit einem Zitat versehen m\"{u}ssen!
+}}
+
+
+%-----------------------------------------------------------------------------
+
+
+
+
+
+
+%-----------------------------------------------------------------------------
+
+\def\bibname{Referenzen und Literaturverzeichnis}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% auskommentieren f\"{u}r biblatex, lassen f\"{u}r bibtex und \bibitem  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\bibliographystyle{amsplain}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% ende Auskommentieren %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\addcontentsline{toc}{chapter}{Referenzen und Literaturverzeichnis}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Wenn bibtex oder biblatex verwendet bitte auskommentieren bis zur n\"{a}chsten Linie
+
+\begin{thebibliography}{99}
+\bibitem{DK2008}\textcolor{darkgreen}{\textbf{Degenhardt, Marion und Karagiannakis, Evangelia.} Lerntagebuch, Arbeitsjournal und Portfolio. Drei S\"{a}ulen eines pers\"{o}nlichen Lernprozess - Begleiters. Neues Handbuch Hochschullehre NHHL 2 34 0808 . 2008, S. C 2.13, S 1-41.}
+\end{thebibliography}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%% bis hier auskommentieren %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%% bibtex  bitte kommentierung aufheben %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\bibliography{vorlage_bibdatei_fuer_abgabe}
+%%%%%%%%%%%%%%%%%%%%%%%% ende bibtex %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%% biblatex %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\printbibliography
+%%%%%%%%%%%%%%%%%%%%% ende biblatex %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\textcolor{darkgreen}{Ein Literaturverzeichnis enth\"{a}lt auch Hinweise auf Hilfen, Texte, Grafiken, Aussagen von anderen Menschen, z.B. von Mitstudierenden! (Alles was Sie \"{u}bernommen haben!)
+}
+
+$_{}$
+\\
+
+\textcolor{darkgreen}{Mit Jabref oder Citavi k\"{o}nnen Sie Ihre Literaturliste pflegen!}
+
+
+$_{}$
+\\ \indent
+
+\textcolor{darkgreen}{In dieses Verzeichnis geh\"{o}ren neben korrekt zitierten Literaturstellen (nicht die Webadresse) auch alle anderen Verweise wie auf Aussagen von anderen Personen, Webstellen, die verwendet wurden, und was immer sonst nicht auf Ihrem Mist gewachsen ist.}
+
+
+%-----------------------------------------------------------------------------
+
+
+\appendix
+
+\chapter*{Anh\"{a}nge}
+\addcontentsline{toc}{chapter}{Anh\"{a}nge}
+
+
+
+\textcolor{darkgreen}{Hier kommen Ihre Anh\"{a}nge hin. Das ist das Motivationsformular, alle Einlagen zu den sechs Pflichtabgaben sowie weitere Materialien nach Ihrer Wahl. Die einzelnen Anh\"{a}nge sollten mit \textbackslash chapter\{welcher Anhang\} betitelt werden!}
+
+
+\chapter{\textcolor{darkgreen}{Beispiel Anhang zur Einlage}}
+
+
+
+\end{document}
+
+% -----------------------------------------------------------------------------

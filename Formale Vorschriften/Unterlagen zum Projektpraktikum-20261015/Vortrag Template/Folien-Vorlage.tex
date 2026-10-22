@@ -1,0 +1,245 @@
+% !TEX encoding = UTF-8 Unicode
+% !TEX spellcheck = de_DE
+% !Mode:: "TeX:UTF-8:DE"
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%
+%% This work is licensed under the Creative Commons Namensnennung - Weitergabe unter gleichen Bedingungen 4.0 International License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/4.0/ or send a letter to Creative Commons, PO Box 1866, Mountain View, CA 94042, USA..
+%%
+%% Othmar Marti, Institut f\"{u}r Experimentelle Physik, Universit\"{a}t Ulm, D-89081 Ulm, Deutschland
+%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+\documentclass[aspectratio=169]{beamer}
+
+\RequirePackage{etex}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{graphicx}
+\usepackage{lmodern} %Druckt sch\"{o}ner
+
+\mode<presentation>
+{
+%  \usetheme{kta}
+  \usetheme{pp16_9}
+  \setbeamercovered{transparent}
+  \beamertemplatenavigationsymbolsempty
+}
+
+
+%Anfang der Kopfzeile
+\newcommand{\zwischentitel}{Beate Baumann und Charles Christen | {}BA Physik}
+\newcommand{\leitthema}{Phys 3107 Projektpraktikum}
+%Datum kann weiter unten ge\"{a}ndert werden (\presdatum{})
+%Ende der Kopfzeile
+
+%Anfang zur Titelseite
+\title{PHYS 3107 Projektpraktikum}
+\author{Beate Baumann und Charles Christen}
+\newcommand{\presdatum}{28. 01. 2027}
+\institute
+{
+  BA Physik
+}
+\subtitle{Vortr\"{a}ge}
+%Ende der Titelseite
+
+
+
+   %\usepackage[style=authoryear-comp sorting=nyt, backend=bibtex8, citestyle=authoryear-comp, autocite=inline, labelalpha=true, hyperref=auto, backref=true]{biblatex}
+   %\usepackage[style=alphabetic, backend=biber]{biblatex}
+   %\usepackage[style=alphabetic, backend=biber]{biblatex}
+   %\usepackage[style=numeric-comp,backend=bibtex8]{biblatex}
+   %\usepackage[style=numeric-comp,backend=biber]{biblatex}
+   \usepackage[style=authoryear, backend=biber]{biblatex}
+   \AtBeginBibliography{\scriptsize}  %makes bibliography smaller
+
+    \addbibresource{zitieren.bib}
+
+
+\DeclareCiteCommand{\citejournal}
+  {\usebibmacro{prenote}}
+  {\usebibmacro{citeindex}%
+    \usebibmacro{journal}}
+  {\multicitedelim}
+  {\usebibmacro{postnote}}
+
+
+
+
+
+%Anfang der Folien
+
+
+
+\begin{document}
+\frame[plain]{\titlepage}
+
+
+\part{Einleitung}
+
+%\begingroup \setbeamercolor{background canvas}{bg=black}
+\begin{frame}{Zitate}{}
+%Option nach Frame []
+%label=name      Legt einen Namen f\"{u}r ein Frame fest um es sp\"{a}ter mit \againframe{name} erneut aufrufen zu k\"{o}nnen.
+% plain      Unterdr\"{u}ckt die Anzeige der \"{U}berschrift, Fu{\ss}zeile und Sidebar.
+% squeeze     Verkleinert die vertikalen Abst\"{a}nde so weit wie m\"{o}glich um u.U. mehr auf der Folie unterbringen zu k\"{o}nnen
+% shrink passt die Gr\"{o}sse der Schrift an
+%fragile sch\"{u}tzt verbatim environments
+
+
+
+    Diese Vorlage verwendet biblatex. Dies ist die modernere Variante von Bibtex. F\"{u}r die Literaturverwaltung empfehle ich Jabref \href{https://www.jabref.org/}{https://www.jabref.org/}, eine freie und plattformunabh\"{a}ngige L\"{o}sung.
+
+
+
+\end{frame}
+% \endgroup
+
+\section{Arbeitsplan}
+
+%\begingroup \setbeamercolor{background canvas}{bg=black}
+\begin{frame}{Arbeitsplan}{ }
+%Option nach Frame []
+%label=name      Legt einen Namen f\"{u}r ein Frame fest um es sp\"{a}ter mit \againframe{name} erneut aufrufen zu k\"{o}nnen.
+% plain      Unterdr\"{u}ckt die Anzeige der \"{U}berschrift, Fu{\ss}zeile und Sidebar.
+% squeeze     Verkleinert die vertikalen Abst\"{a}nde so weit wie m\"{o}glich um u.U. mehr auf der Folie unterbringen zu k\"{o}nnen
+% shrink passt die Gr\"{o}sse der Schrift an
+%fragile sch\"{u}tzt verbatim environments
+
+Kommt noch
+
+\end{frame}
+% \endgroup
+
+\section{Bildzitate}
+
+
+%\hspace*{0.6cm}
+%\vspace*{-1cm}
+%Option nach Frame []
+%label=name      Legt einen Namen f\"{u}r ein Frame fest um es sp\"{a}ter mit \againframe{name} erneut aufrufen zu k\"{o}nnen.
+% plain      Unterdr\"{u}ckt die Anzeige der \"{U}berschrift, Fu{\ss}zeile und Sidebar.
+% squeeze     Verkleinert die vertikalen Abst\"{a}nde so weit wie m\"{o}glich um u.U. mehr auf der Folie unterbringen zu k\"{o}nnen
+\begin{frame}[allowdisplaybreaks,allowframebreaks,t]{Bilder}{und Zitate}
+
+\vspace*{-5mm}
+\begin{center}
+     \includegraphics[width=0.3\textwidth]{anregungsschema}
+\end{center}
+\vspace*{5mm}
+
+ Abbildung aus \cite{Marti2018c}, \citetitle{Marti2018c}
+
+ $_{}$
+
+ ( Bilder und sonstige Zitate in Vortr\"{a}gen m\"{u}ssen auf der Folie, auf der sie verwendet werden,  mindestens mit Namen und Jahr aufgef\"{u}hrt werden. )
+
+\end{frame}
+
+\part{Ergebnisse}
+
+
+\section{Andere Zitate}
+
+%\begingroup \setbeamercolor{background canvas}{bg=black}
+\begin{frame}{Textzitate}{ }
+%Option nach Frame []
+%label=name      Legt einen Namen f\"{u}r ein Frame fest um es sp\"{a}ter mit \againframe{name} erneut aufrufen zu k\"{o}nnen.
+% plain      Unterdr\"{u}ckt die Anzeige der \"{U}berschrift, Fu{\ss}zeile und Sidebar.
+% squeeze     Verkleinert die vertikalen Abst\"{a}nde so weit wie m\"{o}glich um u.U. mehr auf der Folie unterbringen zu k\"{o}nnen
+% shrink passt die Gr\"{o}sse der Schrift an
+%fragile sch\"{u}tzt verbatim environments
+
+
+In ihren Texten erz\"{a}hlen \cite{Gompf2006} \citetitle{Gompf2006} und \cite{Klinkicht2013} \citetitle{Klinkicht2013} viel Interessantes.
+
+\begin{equation*}
+  \int\limits_{-10}^{10} f(x)   dx := F(10)
+\end{equation*}
+
+(aus \cite{Ameisennebel} \citetitle{Ameisennebel})
+
+
+oder
+
+(aus \cite{Ameisennebel} \citeurl{Ameisennebel})
+
+$_{}$
+
+Auch Gleichungen aus anderen Quellen (Paper, andere Gruppe) m\"{u}ssen auf der Folie referenziert werden, auf der sie gebraucht werden.
+
+\end{frame}
+% \endgroup
+
+
+\section{Bemerkungen}
+
+%\begingroup \setbeamercolor{background canvas}{bg=black}
+\begin{frame}{Textzitate}{ }
+%Option nach Frame []
+%label=name      Legt einen Namen f\"{u}r ein Frame fest um es sp\"{a}ter mit \againframe{name} erneut aufrufen zu k\"{o}nnen.
+% plain      Unterdr\"{u}ckt die Anzeige der \"{U}berschrift, Fu{\ss}zeile und Sidebar.
+% squeeze     Verkleinert die vertikalen Abst\"{a}nde so weit wie m\"{o}glich um u.U. mehr auf der Folie unterbringen zu k\"{o}nnen
+% shrink passt die Gr\"{o}sse der Schrift an
+%fragile sch\"{u}tzt verbatim environments
+
+
+Da Zuh\"{o}rer*innen bei einem Vortrag nicht bl\"{a}ttern k\"{o}nnen, muss jegliches Material (Bilder, Grafiken, Gleichungen, Websites, ....) auf der gleichen Folie wie das Material referenziert werden, mindestens mit den Autoren und dem Jahr, besser noch mit dem Titel, dem Buchtitel oder dem Journal oder der Url.
+
+Wird dies vergessen ist das ein Zitatfehler. Zitate wie [1] gen\"{u}gen in Vortr\"{a}gen nicht, da eben nicht gebl\"{a}ttert werden kann.
+
+${}$\\
+
+(aus \cite{Schoedel2002}, \citejournal{Schoedel2002})
+
+${}$\\
+
+oder
+
+${}$\\
+
+(aus \cite{Das2003} \citetitle{Das2003})
+
+\end{frame}
+% \endgroup
+
+%\begingroup \setbeamercolor{background canvas}{bg=black}
+\begin{frame}{Schluss}{ }
+%Option nach Frame []
+%label=name      Legt einen Namen f\"{u}r ein Frame fest um es sp\"{a}ter mit \againframe{name} erneut aufrufen zu k\"{o}nnen.
+% plain      Unterdr\"{u}ckt die Anzeige der \"{U}berschrift, Fu{\ss}zeile und Sidebar.
+% squeeze     Verkleinert die vertikalen Abst\"{a}nde so weit wie m\"{o}glich um u.U. mehr auf der Folie unterbringen zu k\"{o}nnen
+% shrink passt die Gr\"{o}sse der Schrift an
+%fragile sch\"{u}tzt verbatim environments
+
+
+    \begin{itemize}
+    
+    \item Am Ende sollten Sie neben Danksagungen und sonstigen Botschaften noch die Referenzenliste anf\"{u}gen.
+    
+    \end{itemize}
+
+
+
+\end{frame}
+% \endgroup 
+
+\part{Literatur und Referenzen}
+
+\section{Liste der Referenzen}
+
+
+%label=name      Legt einen Namen f\"{u}r ein Frame fest um es sp\"{a}ter mit \againframe{name} erneut aufrufen zu k\"{o}nnen.
+% plain      Unterdr\"{u}ckt die Anzeige der \"{U}berschrift, Fu{\ss}zeile und Sidebar.
+% squeeze     Verkleinert die vertikalen Abst\"{a}nde so weit wie m\"{o}glich um u.U. mehr auf der Folie unterbringen zu k\"{o}nnen
+\begin{frame}[allowdisplaybreaks,allowframebreaks,t]{Referenzen und Literatur}{ }
+
+    \printbibliography
+    \typeout{<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< Biblatex}
+
+\end{frame}
+
+
+\end{document}
