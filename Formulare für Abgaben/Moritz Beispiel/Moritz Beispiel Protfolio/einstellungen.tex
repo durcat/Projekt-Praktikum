@@ -1,0 +1,44 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%  EINSTELLUNGEN – die einzige Datei, in der du deine Angaben einträgst.
+%%  Wird von ALLEN Hauptdateien (Endabgabe + Zwischenabgaben) eingelesen.
+%%  Entspricht dem Block "Die Angaben" der offiziellen Gerüste
+%%  pp-portfolio-geruest-2026-2027.tex / pp-portfolio-geruest-einlage-2026-2027.tex
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Die Angaben %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newcommand{\Semester}{WH 2026-2027}
+\newcommand{\Projekt}{Projekt, Titel des Portfolios}          % z.B. Titel eures Gruppenprojekts
+\newcommand{\Schwerpunkt}{Ihr Schwerpunktthema}               % DEIN Schwerpunkt (≠ Partner/in!)
+\newcommand{\IhrName}{Moritz Kautzsch}                         % Vorname Nachname
+\newcommand{\Matrikelnummer}{Ihre Matrikelnummer}
+\newcommand{\Studiengang}{Ihr Studiengang (Name und Stufe)}   % z.B. Physik B.Sc., 5. Semester
+\newcommand{\emailAdresse}{Ihre e-Mail-Adresse}               % Uni-Adresse empfohlen
+\newcommand{\dasDatum}{Das Datum der Abgabe}                  % z.B. 15.\,03.\,2027
+
+%% Weitere Angaben, die in mehreren Einlagen gebraucht werden
+\newcommand{\Partner}{Name Partnerin/Partner}                  % für Abgrenzung der Schwerpunkte
+\newcommand{\PartnerSchwerpunkt}{Schwerpunkt Partnerin/Partner}
+\newcommand{\Laborbuchlink}{https://link-zum-elektronischen-laborjournal}  % Pflicht in Einlage 3!
+\newcommand{\Protokolldatum}{TT.MM.2026}   % Einlage 3: gewählter Tag (≠ Tag der Partnerin/des Partners)
+\newcommand{\PaperKey}{VORLAGE-Artikel}        % Einlage 2: bib-Key deines Papers in literatur.bib
+\newcommand{\Vortragsdatum}{28.\,01.\,2027}    % Einlage 5
+\newcommand{\FremdVortragKey}{VORLAGE-Vortrag} % Einlage 6: bib-Key des anderen Vortrags
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%  MODUS-SCHALTER
+%%
+%%  \Abgabefalse  = Entwurf: grüne Hilfen sichtbar, Kontrollseite mit
+%%                  Umfangsmessung, Platzhalter rot markiert.
+%%  \Abgabetrue   = Abgabe: grüne Farbe -> schwarz (wie offizielle Zeile 15/16),
+%%                  alle Hilfen + Kontrollseite + Umfangsboxen verschwinden.
+%%                  Übrig gebliebene \platzhalter{} bleiben ROT sichtbar und
+%%                  erzeugen eine Warnung -> dann ist noch etwas offen!
+%%
+%%  \Hinweisefalse blendet im Entwurf nur die grünen Hilfstexte aus
+%%                  (nützlich, um den Umfang realistisch zu messen).
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newif\ifAbgabe
+\newif\ifHinweise
+
+\Abgabefalse      % <-- für die Abgabe auf \Abgabetrue setzen
+\Hinweisetrue     % <-- Hilfstexte im Entwurf ein-/ausblenden

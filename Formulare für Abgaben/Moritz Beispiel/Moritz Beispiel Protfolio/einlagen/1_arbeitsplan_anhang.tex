@@ -1,0 +1,66 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%  ANHANG zu Einlage 1: der Arbeitsplan selbst
+%%  Variante A: Plan als PDF (Excel/ProjectLibre-Export) -> nach anhaenge/ hochladen,
+%%              Variante B auskommentieren und die \anhangpdf-Zeile aktivieren.
+%%  Variante B: Gantt-Diagramm direkt in LaTeX (pgfgantt) – Gerüst unten anpassen.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%% ---- Variante A ----
+%\anhangpdf{Arbeitsplan (Einlage 1)}{anh:arbeitsplan}{anhaenge/arbeitsplan.pdf}
+
+%% ---- Variante B ----
+\chapter{Arbeitsplan (Einlage 1)}
+\label{anh:arbeitsplan}
+
+\hinweis{Gerüst mit den festen Terminen des Projektpraktikums. Arbeitspakete, Zeiträume und Zuständigkeiten
+(\IhrName{} / \Partner{} / gemeinsam) an euer Projekt anpassen; feiner untergliedern; Parallelität sichtbar
+machen. Ein Tag = 0{,}58\,mm. Balken: \texttt{\textbackslash ganttbar\{Name\}\{Start\}\{Ende\}}, Termine:
+\texttt{\textbackslash ganttmilestone\{Name\}\{Datum\}}.}
+
+\begin{figure}[htbp]
+\centering
+\begin{ganttchart}[
+    time slot format=isodate,
+    x unit=0.58mm, y unit chart=0.5cm, y unit title=0.55cm,
+    hgrid, vgrid={*6{draw=none},dotted},
+    title label font=\scriptsize, bar label font=\scriptsize,
+    group label font=\scriptsize\bfseries, milestone label font=\scriptsize\itshape,
+    bar height=0.55, group height=0.35,
+    bar/.append style={fill=blue!25},
+    group/.append style={fill=black!60},
+    milestone/.append style={fill=red!70},
+  ]{2026-10-12}{2027-03-21}
+  \gantttitlecalendar{year, month=shortname} \\
+  \ganttgroup{Planung}{2026-10-12}{2026-10-30} \\
+  \ganttbar{Themen- und Schwerpunktwahl}{2026-10-12}{2026-10-15} \\
+  \ganttbar{Motivationsformular}{2026-10-15}{2026-10-21} \\
+  \ganttbar{Arbeitsplan erstellen}{2026-10-15}{2026-10-28} \\
+  \ganttgroup{Literatur}{2026-10-19}{2026-11-11} \\
+  \ganttbar{Literaturrecherche}{2026-10-19}{2026-11-04} \\
+  \ganttbar{Paper auswerten (Einlage 2)}{2026-10-28}{2026-11-11} \\
+  \ganttgroup{Experiment}{2026-10-22}{2027-01-15} \\
+  \ganttbar{Aufbau planen, Material}{2026-10-22}{2026-11-12} \\
+  \ganttbar{Aufbau und Test}{2026-11-12}{2026-12-03} \\
+  \ganttbar{Messungen}{2026-12-03}{2027-01-08} \\
+  \ganttbar{Puffer (Weihnachten)}{2026-12-21}{2027-01-06} \\
+  \ganttgroup{Auswertung}{2026-12-10}{2027-01-20} \\
+  \ganttbar{Auswertung, Fehlerrechnung}{2026-12-10}{2027-01-15} \\
+  \ganttbar{Messergebnis (Einlage 4)}{2027-01-08}{2027-01-20} \\
+  \ganttgroup{Vortrag}{2027-01-08}{2027-01-28} \\
+  \ganttbar{Folien und Probevortrag}{2027-01-08}{2027-01-27} \\
+  \ganttgroup{Portfolio}{2026-10-15}{2027-03-15} \\
+  \ganttbar{Laborjournal (laufend)}{2026-10-15}{2027-01-28} \\
+  \ganttbar{Vortrags-Einlagen 5 und 6}{2027-01-29}{2027-02-21} \\
+  \ganttbar{Einleitung, Gesamtreflexion}{2027-02-15}{2027-03-08} \\
+  \ganttbar{Korrektur, Endabgabe}{2027-03-01}{2027-03-15} \\
+  \ganttmilestone{Abgabe Arbeitsplan}{2026-10-28} \\
+  \ganttmilestone{Abgabe wiss.\ Arbeit}{2026-11-11} \\
+  \ganttmilestone{Abgabe Protokoll}{2026-12-09} \\
+  \ganttmilestone{Abgabe Messergebnis}{2027-01-20} \\
+  \ganttmilestone{Vortrag (Prüfung)}{2027-01-28} \\
+  \ganttmilestone{Endabgabe Portfolio}{2027-03-15}
+\end{ganttchart}
+\caption{Arbeitsplan von \IhrName{} und \Partner{} für das Projekt \enquote{\Projekt}
+(gemeinsam erstellt). Rote Rauten: Abgabetermine.}
+\label{fig:arbeitsplan}
+\end{figure}

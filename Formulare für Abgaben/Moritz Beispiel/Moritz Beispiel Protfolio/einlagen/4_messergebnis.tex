@@ -1,0 +1,117 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%  EINLAGE 4: EINES IHRER ERGEBNISSE     Zwischenabgabe: 20.01.2027 (obligatorisch)
+%%  Struktur: Beschreibung (1/4–1/2 S.) + Diskussion der Physik (1–3 S.) + Reflexion (1–2 S.)
+%%  Rohdaten, Auswerteformeln, ausgewertete Daten, Grafiken gehören zur Einlage.
+%%  Lange Messwertlisten -> Anhang (4_messergebnis_anhang.tex), nicht in den Text.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Einlage: Eines Ihrer Ergebnisse (Messung oder Berechnung).}
+\label{sec:messergebnis}
+
+\begin{hinweise}
+Hier nehmen Sie ein von Ihnen gemessenes Resultat (Rohdaten, Auswerteformeln und die ausgewerteten Daten und
+Grafiken) und diskutieren es. Ein Bezug zu Ihrem Paper (Einlage~2) ist Voraussetzung.
+\end{hinweise}
+
+\subsection{Beschreibung}
+\begin{hinweise}
+Die Beschreibung gibt alle notwendigen Informationen an, die die Einlage beschreiben, also zum Beispiel das
+Datum, die Art der Messung und eine kurze Inhaltsübersicht, aber keine Nacherzählung (min. $1/4$ Seite bis
+max. $1/2$ Seite!).
+\end{hinweise}
+\begin{umfang}{Einlage 4 (Messergebnis): Beschreibung}{0.25}{0.5}
+\platzhalter{Datum, Art der Messung, Messaufbau in Kürze, was die Einlage enthält (Rohdaten in
+Anhang~\ref{anh:messdaten}, Auswertung, Abbildung~\ref{fig:messergebnis})}
+\end{umfang}
+
+\subsection{Diskussion der Physik}
+\begin{hinweise}
+Beschreiben Sie hier die Physik dieser Einlage.
+\begin{itemize}\itemsep0pt
+\item Was haben Sie gemessen oder berechnet?
+\item Was ist die Hauptaussage?
+\item Was sind die Voraussetzungen für Ihre Messung?
+\item Welches sind Ihre Auswerteformeln?
+\item Was trägt ihre \textbf{wissenschaftliche Arbeit} zur Argumentation bei?
+\item Welche Physik dieser Einlage ist bei Ihrem Schwerpunktthema anwendbar?
+\item Wo gab es Schwierigkeiten beim Verständnis der Physik? Welche?
+\item Wie haben Sie Ihr Paper aus der Einlage \flqq Eine wissenschaftliche Arbeit\frqq{} für diese Einlage verwendet? Warum? Wo?
+\item Stimmen Ihre Ergebnisse mit den Aussagen aus dem Paper überein?
+\end{itemize}
+\textbf{Die Diskussion der Physik sollte mindestens eine Seite und maximal 3 Seiten lang sein. Die
+Längenangaben sind ohne Titel, Bilder, Tabellen und Tabellen- oder Bildlegenden und ohne übergrosse Abstände
+zu Gleichungen zu verstehen. Ich werde gegebenenfalls Ihre Auswertung anhand der beigelegten Daten
+überprüfen.}
+
+\smallskip Regeln für Abbildungen/Tabellen/Gleichungen (Limmer): jede Abbildung mit Bildunterschrift und im
+Text referenziert; Schrift in Diagrammen $\geq 10$\,pt in Endgröße; Achsen \enquote{Größe / Einheit}
+(z.\,B. $f$\,/\,kHz, nicht $f$ [kHz]); logarithmisch: $\lg(f/\mathrm{Hz})$; bei guter Übereinstimmung
+Messung--Theorie zusätzlich Residuenplot; Tabellen mit Überschrift; Messdaten nicht (nur) als Tabelle,
+sondern (auch) als Diagramm; wichtige Gleichungen nummeriert, alle Symbole definiert.
+Die Beispiele unten sind Gerüste -- anpassen oder löschen.
+\end{hinweise}
+\begin{umfang}{Einlage 4 (Messergebnis): Diskussion der Physik}{1}{3}
+\platzhalter{Was wurde gemessen, Hauptaussage, Voraussetzungen}
+
+% ---------- Beispiel: Auswerteformel mit Nummer und Verweis ----------
+Die Auswertung beruht auf
+\begin{equation}
+  L = 20\,\lg\!\left(\frac{\tilde{p}}{p_0}\right)\,\mathrm{dB},
+  \qquad p_0 = \SI{20}{\micro\pascal},
+  \label{eq:pegel}
+\end{equation}
+wobei $\tilde{p}$ der Effektivwert des Schalldrucks ist. \platzhalter{Beispielgleichung ersetzen; Bezug
+zum Paper: z.\,B. \enquote{Analog zu \cite[Gl.~(2)]{\PaperKey} \dots}; Gl.~\eqref{eq:pegel} im Text verwenden}
+
+% ---------- Beispiel: Abbildung (Datei nach abbildungen/ hochladen) ----------
+\begin{figure}[htbp]
+  \centering
+  %\includegraphics[width=0.8\textwidth]{messergebnis.pdf}
+  \fbox{\parbox[c][4cm][c]{0.7\textwidth}{\centering\platzhalter{Abbildung: abbildungen/messergebnis.pdf}}}
+  \caption{\platzhalter{Aussagekräftige Bildunterschrift: was ist zu sehen, Messbedingungen, Ergebnis der
+    Anpassung mit Gl.~\eqref{eq:pegel}. Fremde Abbildungen: \cite[Abb.~3]{\PaperKey}}}
+  \label{fig:messergebnis}
+\end{figure}
+
+% ---------- Beispiel: kurze Ergebnistabelle (Rohdaten in den Anhang!) ----------
+\begin{table}[htbp]
+  \centering
+  \caption{\platzhalter{Tabellenüberschrift}}
+  \label{tab:ergebnis}
+  \begin{tabular}{S[table-format=3.0] S[table-format=2.1(1)]}
+    \toprule
+    {$\theta$ / \si{\degree}} & {$L$ / \si{\deci\bel}} \\
+    \midrule
+    0   & 0.0(2) \\
+    90  & -6.1(3) \\
+    180 & -18.4(5) \\
+    \bottomrule
+  \end{tabular}
+\end{table}
+
+\platzhalter{Diskussion: Abbildung~\ref{fig:messergebnis} und Tabelle~\ref{tab:ergebnis} im Text
+verwenden, Unsicherheiten, Vergleich mit dem Paper, Anwendbarkeit auf \Schwerpunkt}
+\end{umfang}
+
+\subsection{Reflexion}
+\begin{hinweise}
+In der Reflexion sollen Sie sich Gedanken machen über die Wirkung dieser Einlage und der Arbeit mit ihr auf
+Ihren Lernfortschritt.
+\begin{itemize}\itemsep0pt
+\item In welchem Zusammenhang steht die Einlage mit Ihrem Schwerpunktthema?
+\item Was haben Sie bei der Erstellung dieser Einlage gelernt?
+\item Wie hat Ihnen die Einlage beim Verständnis Ihres Projektthemas geholfen?
+\item Wo gab es Schwierigkeiten bei der Beschäftigung mit der Einlage?
+\item Was hätten Sie anders gemacht, wenn Sie die Einlage nochmals erstellen müssten?
+\item Was sagen Ihre Kommilitoninnen oder Kommilitonen dazu, als Kommentar oder wenn Sie mit Ihnen über die Einlage diskutieren?
+\item Haben Sie in der Durchführung oder Auswertung der Messung logische oder physikalische Fehler entdeckt?
+\item Gab es bei der Beschäftigung mit der Einlage eine überraschende neue Erkenntnis?
+\end{itemize}
+\textbf{Die Reflexion für eine Einlage sollte mindestens eine Seite und maximal 2 Seiten lang sein. Die
+Längenangaben sind ohne Titel, Bilder, Tabellen und Tabellen- oder Bildlegenden zu verstehen.}
+\end{hinweise}
+\begin{umfang}{Einlage 4 (Messergebnis): Reflexion}{1}{2}
+\platzhalter{Reflexion in Fließtext -- Leitfragen erkennbar beantworten}
+\end{umfang}
+
+%\subsection{Eigene Bewertungskriterien}
+%...

@@ -1,0 +1,46 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%  MOTIVATIONSFORMULAR (ohne Reflexion)   Moodle: 21.10.2026 (obligatorisch)
+%%  Layout 1:1 aus "Motivationsformular für Portfolio-2026-2027-tex.tex";
+%%  ergänzt nur um eine Namenszeile. Antworten in
+%%  kapitel/motivationsformular_antworten.tex eintragen (gleicher Text landet
+%%  automatisch im Anhang der Endabgabe).
+%%  Overleaf: Menü -> Main document = diese Datei. PDF: Kautzsch_Motivationsformular.pdf
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\input{einstellungen}
+\documentclass[pdftex,12pt,twoside,footsepline,headsepline,a4paper,final]{scrreprt}
+\usepackage[verbose,a4paper,bottom=25mm,top=25mm]{geometry} %showframe,
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{ngerman}
+\usepackage{color}
+
+\newcommand{\platz}{\vspace{2.1cm}}
+
+%% Hilfsmakros dieser Vorlage
+\newcounter{platzhalter}
+\DeclareRobustCommand{\platzhalter}[1]{\stepcounter{platzhalter}%
+  \textcolor{red}{\textbf{[}\,#1\,\textbf{]}}%
+  \ifAbgabe\PackageWarning{Portfolio}{Platzhalter noch vorhanden: #1}\fi}
+\newcommand{\antwort}[1]{\par\smallskip #1\par\bigskip}
+
+\begin{document}
+
+\begin{huge}
+\textbf{Projektpraktikum 2026-2027}
+\end{huge}
+
+\par\noindent\rule{\textwidth}{0.4pt}
+
+\IhrName, Matrikelnummer \Matrikelnummer, \Studiengang
+
+$_{}$
+
+\begin{Large}
+\textcolor[rgb]{0.31,0.51,0.74}{\emph{Erwartungen an das Projektpraktikum}}
+\end{Large}
+
+$_{}$
+
+\input{kapitel/motivationsformular_antworten}
+
+\end{document}

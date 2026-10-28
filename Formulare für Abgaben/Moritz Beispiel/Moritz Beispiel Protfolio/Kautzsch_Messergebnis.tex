@@ -1,0 +1,38 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%  ZWISCHENABGABE: Einlage: Eines meiner Ergebnisse   (Moodle: 20.01.2027)
+%%  Aufbau nach pp-portfolio-geruest-einlage-2026-2027.tex.
+%%  Der Text steht in einlagen/4_messergebnis.tex und wird 1:1 in die Endabgabe übernommen.
+%%  Overleaf: Menü -> Main document = diese Datei. PDF für Moodle benennen:
+%%  Kautzsch_Messergebnis.pdf
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\input{einstellungen}
+\newcommand{\dieEinlage}{Einlage: Eines meiner Ergebnisse}
+
+\documentclass[pdftex,12pt,twoside,footsepline,headsepline,a4paper,final]{scrreprt}
+\input{praeambel}
+\ohead{\zubearbeiten{\Projekt{} - \Schwerpunkt}}
+
+\begin{document}
+
+\input{kapitel/titelseite_einlage}
+\tableofcontents
+\kontrollseite   % nur im Entwurf sichtbar
+
+\chapter{Hauptteil}
+\begin{hinweise}
+Beachten Sie die Hinweise in der Datei mit dem Gerüst für die Endabgabe! Auch bei einer Zwischenabgabe ist
+eine korrekte Literaturarbeit notwendig. Denken Sie daran, dass Sie alle Hinweise im Text auf andere Werke
+(Artikel, Bücher, Bilder, Grafiken) aber auch alle Erwähnungen von Meinungen anderer Personen mit einem Zitat
+versehen müssen! Beachten Sie auch die Fragen bei der jeweiligen Abgabe in Moodle.
+\end{hinweise}
+
+\input{einlagen/4_messergebnis}
+
+\printbibliography[heading=bibintoc,title={Referenzen und Literaturverzeichnis}]
+
+\appendix
+\chapter*{Anh\"{a}nge}
+\addcontentsline{toc}{chapter}{Anh\"{a}nge}
+\input{einlagen/4_messergebnis_anhang}
+
+\end{document}

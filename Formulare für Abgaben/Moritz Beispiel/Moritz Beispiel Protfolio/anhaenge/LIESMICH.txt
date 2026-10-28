@@ -1,0 +1,1 @@
+Hier PDFs ablegen (paper.pdf, laborjournal.pdf, folien.pdf, ...)
