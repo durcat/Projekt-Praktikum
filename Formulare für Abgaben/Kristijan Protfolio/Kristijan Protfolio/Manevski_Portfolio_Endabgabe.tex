@@ -1,0 +1,74 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%  ENDABGABE PORTFOLIO  (15.03.2027)  – Hauptdatei
+%%  Aufbau nach pp-portfolio-geruest-2026-2027.tex:
+%%    Titelseite – Inhaltsverzeichnis – Einleitung – Hauptteil (6 Pflichteinlagen
+%%    + freiwillige) – Gesamtreflexion – Literaturverzeichnis – Anhänge
+%%  Texte schreibst du in kapitel/ und einlagen/, Angaben in einstellungen.tex.
+%%  Overleaf: Menü -> Main document = diese Datei (für Endabgabe).
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\input{einstellungen}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% TeX Front Matter %%%%%%%%%%%%%%%%%%%%%%%%%
+\documentclass[pdftex,12pt,twoside,footsepline,headsepline,a4paper,final]{scrreprt}
+\input{praeambel}
+\ohead{\zubearbeiten{\Projekt}}
+
+%-----------------------------------------------------------------------------
+\begin{document}
+
+\input{kapitel/titelseite}
+%-----------------------------------------------------------------------------
+\tableofcontents
+\kontrollseite   % nur im Entwurf sichtbar
+% ----------------------------------------------------------------------------
+
+\input{kapitel/einleitung}
+
+%-----------------------------------------------------------------------------
+\chapter{Hauptteil}
+\hinweis{Der Hauptteil besteht aus mindestens sechs Einlagen. Jede Einlage: Beschreibung + Reflexion
+(+ Diskussion der Physik bei Einlagen 2, 4, 6); die Einlage selbst steht im Anhang.}
+
+\input{einlagen/1_arbeitsplan}
+\input{einlagen/2_wiss_arbeit}
+\input{einlagen/3_protokoll}
+\input{einlagen/4_messergebnis}
+\input{einlagen/5_vortrag}
+\input{einlagen/6_fremder_vortrag}
+
+%% Freiwillig: weitere Einlagen (Vorlage kopieren, dann hier einbinden)
+%\input{einlagen/7_zusatz_VORLAGE}
+
+%-----------------------------------------------------------------------------
+\input{kapitel/gesamtreflexion}
+
+%-----------------------------------------------------------------------------
+\printbibliography[heading=bibintoc,title={Referenzen und Literaturverzeichnis}]
+\begin{hinweise}
+Ein Literaturverzeichnis enthält auch Hinweise auf Hilfen, Texte, Grafiken, Aussagen von anderen Menschen,
+z.B. von Mitstudierenden! (Alles was Sie übernommen haben!) In dieses Verzeichnis gehören neben korrekt
+zitierten Literaturstellen (nicht die Webadresse) auch alle anderen Verweise wie auf Aussagen von anderen
+Personen, Webstellen, die verwendet wurden, und was immer sonst nicht auf Ihrem Mist gewachsen ist.
+Mit Jabref oder Citavi können Sie Ihre Literaturliste pflegen!
+\end{hinweise}
+
+%-----------------------------------------------------------------------------
+\appendix
+\chapter*{Anh\"{a}nge}
+\addcontentsline{toc}{chapter}{Anh\"{a}nge}
+\hinweis{Hier kommen Ihre Anhänge hin. Das ist das Motivationsformular, alle Einlagen zu den sechs
+Pflichtabgaben sowie weitere Materialien nach Ihrer Wahl. Die einzelnen Anhänge sollten mit
+\textbackslash chapter\{welcher Anhang\} betitelt werden!}
+
+\chapter{Motivationsformular}
+\label{anh:motivationsformular}
+\input{kapitel/motivationsformular_antworten}
+
+\input{einlagen/1_arbeitsplan_anhang}
+\input{einlagen/2_wiss_arbeit_anhang}
+\input{einlagen/3_protokoll_anhang}
+\input{einlagen/4_messergebnis_anhang}
+\input{einlagen/5_vortrag_anhang}
+\input{einlagen/6_fremder_vortrag_anhang}
+
+\end{document}

@@ -1,0 +1,82 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%  ANHANG zu Einlage 1: der Arbeitsplan selbst
+%%  Variante A (aktiv): Excel-Export Arbeitsplan_Wackelstein.pdf (A3 quer, 2 Seiten)
+%%              = Kopie aus Arbeitsplan/Aktueller Arbeitsplan/ -> anhaenge/arbeitsplan.pdf.
+%%              Nach jeder Änderung am Excel-Plan neu als PDF exportieren und ersetzen.
+%%  Variante B: Gantt-Diagramm direkt in LaTeX (pgfgantt) mit den Daten aus der
+%%              Excel-Datei (Stand 22.10.2026). Zum Aktivieren Variante A auskommentieren
+%%              und \iffalse/\fi um Variante B entfernen.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%% ---- Variante A ----
+\anhangpdf[pages=-,landscape]{Arbeitsplan (Einlage 1)}{anh:arbeitsplan}{anhaenge/arbeitsplan.pdf}
+
+%% ---- Variante B ----
+\iffalse
+\chapter{Arbeitsplan (Einlage 1)}
+\label{anh:arbeitsplan}
+
+\hinweis{Daten aus Arbeitsplan\_Wackelstein.xlsx (Stand 22.\,10.\,2026), auf die oberen Ebenen
+gekürzt. Ein Tag = 0{,}58\,mm. K = Kristijan, J = Janosch, B = beide.}
+
+\begin{figure}[htbp]
+\centering
+\begin{ganttchart}[
+    time slot format=isodate,
+    x unit=0.58mm, y unit chart=0.42cm, y unit title=0.5cm,
+    hgrid, vgrid={*6{draw=none},dotted},
+    title label font=\scriptsize, bar label font=\tiny,
+    group label font=\scriptsize\bfseries, milestone label font=\tiny\itshape,
+    bar height=0.55, group height=0.35,
+    bar/.append style={fill=blue!25},
+    group/.append style={fill=black!60},
+    milestone/.append style={fill=red!70},
+  ]{2026-10-12}{2027-03-21}
+  \gantttitlecalendar{year, month=shortname} \\
+  \ganttgroup{1 Theorie \& Literatur}{2026-10-15}{2026-12-17} \\
+  \ganttbar{1.1 Literaturrecherche (B)}{2026-10-15}{2026-11-04} \\
+  \ganttbar{1.2/1.3 Paper wählen + durcharbeiten (B)}{2026-10-29}{2026-11-10} \\
+  \ganttbar[bar/.append style={fill=orange!50}]{1.4 Bewegungsgleichungen (K)}{2026-10-29}{2026-11-25} \\
+  \ganttbar{1.5 Trägheitstensor aus STL (J)}{2026-10-29}{2026-11-25} \\
+  \ganttbar[bar/.append style={fill=orange!50}]{1.6 Simulation Umkehrdynamik (K)}{2026-11-19}{2026-12-17} \\
+  \ganttbar{1.7 Vorhersage Umkehrzeit (J)}{2026-11-19}{2026-12-17} \\
+  \ganttgroup{2 Materialien}{2026-10-12}{2026-11-26} \\
+  \ganttbar{2.1.1 Sensor und Akku festlegen (B)}{2026-10-12}{2026-10-19} \\
+  \ganttbar{2.1.2 Auftrag E-Werkstatt (B)}{2026-10-22}{2026-11-09} \\
+  \ganttbar[bar/.append style={fill=orange!50}]{2.1.3/2.1.4 Firmware + Kalibrierung (K)}{2026-11-05}{2026-11-26} \\
+  \ganttbar{2.2.1 Prototyp Stein, 3D-Druck (J/B)}{2026-10-12}{2026-11-08} \\
+  \ganttbar{2.2.2 Messkörper mit Sensorfach (J)}{2026-11-05}{2026-11-12} \\
+  \ganttgroup{3 Versuchsaufbau}{2026-10-22}{2026-12-14} \\
+  \ganttbar{3.1 Glasplatte besorgen, testen, nivellieren}{2026-10-22}{2026-10-29} \\
+  \ganttbar[bar/.append style={fill=orange!50}]{3.2 Video (K)}{2026-10-29}{2026-12-14} \\
+  \ganttbar{3.3 Reproduzierbarer Anstoß}{2026-10-29}{2026-12-14} \\
+  \ganttgroup{4 Messungen}{2026-10-15}{2027-02-11} \\
+  \ganttbar{4.1 Laborjournal (B)}{2026-10-15}{2027-02-11} \\
+  \ganttbar{4.2 Testmessung (B)}{2026-12-03}{2026-12-07} \\
+  \ganttbar{4.3--4.5 Messreihen 1--3 (B)}{2026-12-07}{2027-01-21} \\
+  \ganttbar{4.6 Nachmessungen / Puffer (B)}{2027-01-21}{2027-02-11} \\
+  \ganttgroup{5 Auswertung}{2026-11-26}{2027-01-19} \\
+  \ganttbar[bar/.append style={fill=orange!50}]{5.1 Datenpipeline Python (K)}{2026-11-26}{2026-12-17} \\
+  \ganttbar{5.2--5.5 Fits, Fehlerrechnung, Vergleich (B)}{2026-12-07}{2027-01-19} \\
+  \ganttgroup{6 Vortrag}{2027-01-14}{2027-01-28} \\
+  \ganttbar{6.1/6.2 Folien + Probevortrag (B)}{2027-01-14}{2027-01-26} \\
+  \ganttgroup{7 Portfolio (individuell)}{2026-10-15}{2027-03-15} \\
+  \ganttbar{Einlagen schreiben}{2026-10-22}{2027-02-20} \\
+  \ganttbar{Einleitung + Gesamtreflexion}{2027-02-22}{2027-03-07} \\
+  \ganttbar{Korrektur + Puffer}{2027-03-08}{2027-03-13} \\
+  \ganttmilestone{Arbeitsplan}{2026-10-28} \\
+  \ganttmilestone{Wiss.\ Arbeit}{2026-11-11} \\
+  \ganttmilestone{Protokoll}{2026-12-09} \\
+  \ganttmilestone{Messergebnis}{2027-01-20} \\
+  \ganttmilestone{Vortrag (Prüfung)}{2027-01-28} \\
+  \ganttmilestone{Endabgabe Portfolio}{2027-03-15}
+\end{ganttchart}
+\caption{Arbeitsplan von \IhrName{} und \Partner{} für das Projekt \enquote{\Projekt}
+(gemeinsam erstellt, Stand 22.\,10.\,2026). Orange: eigene Arbeitspakete, rote Rauten: Abgabetermine.}
+\label{fig:arbeitsplan}
+\end{figure}
+\fi
+
+%% ---- KI-Nutzung (Pflicht laut Zitierregeln): alle Prompts + ausgefüllter Fragebogen ----
+%% erzeugt aus Fragebogen_Arbeitsplan.md; bei Änderungen am Fragebogen neu erzeugen
+\input{einlagen/1_arbeitsplan_ki_anhang}

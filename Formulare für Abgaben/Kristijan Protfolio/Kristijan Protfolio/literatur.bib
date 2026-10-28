@@ -1,0 +1,225 @@
+% Encoding: UTF-8
+% Literaturdatenbank für das Portfolio (biblatex/biber).
+% Pflegen z.B. mit JabRef, Zotero (Export "Better BibLaTeX") oder Citavi.
+% Es erscheinen nur Einträge, die im Text mit \cite{...} zitiert werden.
+%
+% ZITIERREGELN (Marti, "Wie mit [XY01] zitieren?", 31.08.2026):
+%  * ALLES zitieren: Literatur, Ideen/Input von Kolleg*innen, Bilder, Anleitungen, KI.
+%  * Journalartikel: Autoren, Titel, Journal, Band, Seiten, Jahr, DOI (nicht als Link).
+%  * Bücher: Autoren, Titel, Verlag, Verlagsort, Jahr (ISBN hilfreich).
+%  * Webseiten: Link + Entnahmedatum (urldate). Wikipedia: volle URL zur Version.
+%  * KI: System + ALLE Prompts (+ weitere Inputs). KI-umgeschriebener Text ist
+%    vollständig als KI-generiert zu kennzeichnen und zu zitieren.
+%  * Bilder: \cite[Abb.~3.4]{key}, Gleichungen: \cite[Gl.~(3)]{key};
+%    ohne Nummer: Seite + Lage (oben/mitte/unten).
+%
+% Einträge mit Key "VORLAGE-..." sind Muster: kopieren, Key umbenennen, ausfüllen.
+
+%%%%%%%%%%%%%%%%%%%%% aus vorlage_bibdatei_fuer_abgabe.bib (offiziell) %%%%%%%%%%%%%%%%%%%%
+@Book{DK2008,
+  author = {Degenhardt, Marion and Karagiannakis, Evangelia},
+  date   = {2008},
+  title  = {Lerntagebuch, Arbeitsjournal und Portfolio. Drei S{\"a}ulen eines pers{\"o}nlichen Lernprozess - Begleiters. Neues Handbuch Hochschullehre NHHL 2 34 0808},
+  pages  = {1-41},
+  volume = {S. C 2.13},
+}
+
+%%%%%%%%%%%%%%%%%%%%% Kursunterlagen %%%%%%%%%%%%%%%%%%%%
+@Misc{Marti2026Portfolio,
+  author       = {Marti, Othmar},
+  title        = {Portfolios im Projektpraktikum},
+  year         = {2026},
+  date         = {2026-07-09},
+  organization = {Universit{\"a}t Ulm, Institut f{\"u}r Experimentelle Physik},
+  note         = {Kursunterlage Projektpraktikum WS 2026/27, Moodle},
+}
+
+@Misc{Limmer2007,
+  author       = {Limmer, Wolfgang},
+  title        = {Protokollrichtlinien in der Physik},
+  year         = {2007},
+  organization = {Universit{\"a}t Ulm},
+  note         = {Tutorenschulung, 15.10.2007},
+}
+
+@Misc{Themenliste2026,
+  author       = {{Universit{\"a}t Ulm, Projektpraktikum}},
+  title        = {Projektpraktikum 2026/2027 -- Gew{\"a}hlte Versuche in diesem Semester},
+  date         = {2026-10-14},
+  note         = {Themenliste (Abfrage Themen aktuelles Semester), Eintrag \enquote{Dynamik Keltischer Wackelsteine}},
+}
+
+%%%%%%%%%%%%%%%%%%%%% Projekt: Dynamik Keltischer Wackelsteine %%%%%%%%%%%%%%%%%%%%
+
+% Wissenschaftliche Arbeit (Einlage 2) -> \PaperKey; PDF: Literatur/ bzw. anhaenge/
+@Article{KondoNakanishi2017,
+  author  = {Kondo, Yoichiro and Nakanishi, Hiizu},
+  title   = {Rattleback dynamics and its reversal time of rotation},
+  journal = {Physical Review E},
+  volume  = {95},
+  number  = {6},
+  pages   = {062207},
+  year    = {2017},
+  doi     = {10.1103/PhysRevE.95.062207},
+}
+
+% Zusatzliteratur (Garcia-Hubbard-Formel f{\"u}r die Umkehrzeit); PDF in Literatur/
+% DOI vor der Abgabe pr{\"u}fen (PDF ist ein JSTOR-Scan ohne DOI-Angabe)
+@Article{GarciaHubbard1988,
+  author  = {Garcia, A. and Hubbard, M.},
+  title   = {Spin reversal of the rattleback: theory and experiment},
+  journal = {Proceedings of the Royal Society of London. Series A, Mathematical and Physical Sciences},
+  volume  = {418},
+  number  = {1854},
+  pages   = {165--197},
+  year    = {1988},
+  doi     = {10.1098/rspa.1988.0078},
+}
+
+% Aufgabenstellung Einlage Arbeitsplan inkl. Beispielplan "Mittagessen kochen" (Vorlage)
+@Misc{MoodleArbeitsplan2026,
+  author       = {{Universit{\"a}t Ulm, Projektpraktikum}},
+  title        = {Einlage: Arbeitsplan -- Aufgabenstellung mit Beispielplan \enquote{Mittagessen kochen} (WS 2023/24)},
+  date         = {2026},
+  howpublished = {Moodle-Kurs Projektpraktikum WH 2026-2027},
+}
+
+% Besprechung des Arbeitsplans mit Prof. Marti (Einlage 1)
+@Misc{Marti2026Gespraech,
+  author       = {Marti, Othmar},
+  title        = {Besprechung des Arbeitsplans},
+  howpublished = {m{\"u}ndliche Mitteilung},
+  date         = {2026-10-22},
+  note         = {Projektpraktikum WS 2026/27, Universit{\"a}t Ulm},
+}
+
+% KI-Nutzung (Pflicht laut Zitierregeln): Beschreibung + Reflexion der Einlage 1 sind KI-formuliert.
+% Format nach dem Muster "Name2026" aus zitieren.bib (Kursunterlagen "Zitieren").
+@Unpublished{Manevski2026KIArbeitsplan,
+  author   = {Manevski, Kristijan},
+  title    = {{KI-generierter Content: Beschreibung und Reflexion der Einlage Arbeitsplan}},
+  date     = {2026-10-28},
+  note     = {KI-System: Claude Opus 5.5 (Anthropic), verwendet in Claude Code. Der Text wurde aus meinen
+              Antworten auf einen von der KI erstellten Fragebogen formuliert. Weitere Inputs: Arbeitsplan\_Wackelstein.xlsx,
+              die Kursunterlagen im Projektordner und die Arbeitsplan-Abgabe von J.~Lustig (nur als Vergleich f{\"u}r
+              Umfang und Stil). Alle Prompts und der ausgef{\"u}llte Fragebogen stehen vollst{\"a}ndig in
+              Anhang~\ref{anh:ki-arbeitsplan}},
+}
+
+% Gemeinsamer Arbeitsplan (Einlage 1)
+@Misc{ManevskiJanosch2026Arbeitsplan,
+  author       = {Manevski, Kristijan and Lustig, Janosch},
+  title        = {Arbeitsplan -- Dynamik Keltischer Wackelsteine},
+  date         = {2026-10-22},
+  howpublished = {Excel-Arbeitsmappe Arbeitsplan\_Wackelstein.xlsx},
+  note         = {Projektpraktikum WS 2026/27, Universit{\"a}t Ulm},
+}
+
+% Peer-Input: Arbeitsplan/Zeitplan von Petros als Vorlage (Einlage 1) -- Nachnamen erg{\"a}nzen!
+@Misc{Petros2026Arbeitsplan,
+  author       = {Petros},
+  title        = {Arbeitsplan und Zeitplan (Projektpraktikum WS 2026/27)},
+  howpublished = {pers{\"o}nliche Mitteilung, Dateien petros\_arbeitsplan\_zum\_abgucken.py und petros\_zeitplan\_zum\_abgucken.csv},
+  date         = {2026-10},
+  note         = {verwendet als Vorlage f{\"u}r Struktur und Termine des eigenen Arbeitsplans},
+}
+
+% Eigenes elektronisches Laborjournal (Einlage 3) -- Link eintragen
+@Misc{Laborjournal2026,
+  author       = {Manevski, Kristijan and Lustig, Janosch},
+  title        = {Elektronisches Laborjournal Projektpraktikum -- Dynamik Keltischer Wackelsteine},
+  year         = {2026},
+  url          = {https://link-zum-laborjournal},
+  urldate      = {2026-12-09},
+}
+
+%%%%%%%%%%%%%%%%%%%%% MUSTER %%%%%%%%%%%%%%%%%%%%
+
+% Wissenschaftliche Arbeit (Einlage 2): nur begutachtete Fachzeitschrift!
+@Article{VORLAGE-Artikel,
+  author  = {Nachname, A. and Nachname, B.},
+  title   = {Titel des Artikels},
+  journal = {Name der Zeitschrift},
+  volume  = {99},
+  number  = {1},
+  pages   = {1--10},
+  year    = {2020},
+  doi     = {10.0000/xxxxx},
+}
+
+@Book{VORLAGE-Buch,
+  author    = {Nachname, A.},
+  title     = {Titel des Buches},
+  edition   = {2},
+  publisher = {Verlag},
+  location  = {Verlagsort},
+  year      = {2020},
+  isbn      = {978-3-...},
+}
+
+% Kapitel in einem Sammelband: Autoren des Kapitels + Editoren des Buches
+@InCollection{VORLAGE-Sammelband,
+  author    = {Nachname, A.},
+  title     = {Titel des Kapitels},
+  editor    = {Herausgeber, H.},
+  booktitle = {Titel des Sammelbandes},
+  publisher = {Verlag},
+  location  = {Verlagsort},
+  year      = {2020},
+  pages     = {10--20},
+}
+
+% Webseite: Link + Abrufdatum
+@Online{VORLAGE-Webseite,
+  author  = {Autor oder Organisation},
+  title   = {Titel der Seite},
+  url     = {https://www.example.org/seite},
+  urldate = {2026-10-19},
+  year    = {2026},
+}
+
+% Datenblatt / Bedienungsanleitung (auch "Betriebsanweisungen" zitieren)
+@Manual{VORLAGE-Datenblatt,
+  title        = {Typbezeichnung -- Datenblatt},
+  organization = {Hersteller},
+  year         = {2024},
+  url          = {https://www.example.org/datenblatt.pdf},
+  urldate      = {2026-10-19},
+}
+
+% Aussage/Hilfe/Feedback einer Person (Peer-Feedback wird bewertet -> zitieren!)
+@Misc{VORLAGE-Gespraech,
+  author       = {Nachname, Vorname},
+  title        = {Pers{\"o}nliches Gespr{\"a}ch / Kommentar zu \dots},
+  howpublished = {m{\"u}ndliche Mitteilung},
+  date         = {2026-10-20},
+  note         = {Projektpraktikum WS 2026/27, Universit{\"a}t Ulm},
+}
+
+% Vortrag einer anderen Gruppe (Einlage 6)
+@Misc{VORLAGE-Vortrag,
+  author       = {Nachname, A. and Nachname, B.},
+  title        = {Titel des Vortrags},
+  howpublished = {Vortrag im Projektpraktikum WS 2026/27},
+  date         = {2027-01-28},
+  organization = {Universit{\"a}t Ulm},
+}
+
+% Eigenes elektronisches Laborjournal
+@Misc{VORLAGE-Laborjournal,
+  author       = {Manevski, Kristijan and Lustig, Janosch},
+  title        = {Elektronisches Laborjournal Projektpraktikum},
+  year         = {2026},
+  url          = {https://link-zum-laborjournal},
+  urldate      = {2026-12-09},
+}
+
+% KI-Nutzung (Pflicht!): System + ALLE Prompts und weiteren Inputs
+@Misc{VORLAGE-KI,
+  author       = {{Anthropic}},
+  title        = {Claude -- KI-Assistent, Modell \dots},
+  howpublished = {https://claude.ai},
+  date         = {2026-10-19},
+  note         = {Verwendet f{\"u}r: \dots. Prompts: (1) "\dots" (2) "\dots". Weitere Inputs: \dots},
+  keywords     = {KI},
+}

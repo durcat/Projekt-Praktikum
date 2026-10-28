@@ -1,0 +1,168 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%  PRÄAMBEL – gemeinsam für Endabgabe und alle Zwischenabgaben.
+%%  Teil 1 ist 1:1 die Präambel der offiziellen Gerüste (nicht verändern),
+%%  Teil 2 ergänzt nur Pakete für Gleichungen, Bilder, PDF-Einbindung usw.,
+%%  Teil 3 enthält die Hilfsmakros dieser Vorlage.
+%%  Die \documentclass-Zeile steht (unverändert offiziell) in jeder Hauptdatei.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Teil 1: offizielle Präambel %%%%%%%%%%%%%%%%%%%%%%
+\usepackage[verbose,a4paper,bottom=25mm,top=25mm]{geometry} %showframe,
+\usepackage{scrlayer-scrpage}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{ngerman}
+\usepackage{color}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsthm}
+%%%%%%%%%%%%%%%%%%%%%%%%% Biblatex (offizielle Optionen, Backend Biber) %%%%%%%%%%
+%% Overleaf erkennt biber automatisch. Zitierstil alphabetic: [Sch02]
+\usepackage[sorting=nyt, backend=biber, citestyle=alphabetic, style=alphabetic,
+            autocite=inline, labelalpha=true, hyperref=auto, backref=true,
+            language=ngerman]{biblatex}
+\addbibresource{literatur.bib}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Teil 2: Zusatzpakete %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{amsmath}               % \eqref, align, nummerierte Gleichungen
+\usepackage{xcolor}
+\definecolor{darkgreen}{rgb}{0,0.5,0}   % offizielle Hinweisfarbe
+\usepackage{graphicx}              % \includegraphics
+\graphicspath{{abbildungen/}}
+\usepackage{booktabs}              % schöne Tabellen
+\usepackage[locale=DE]{siunitx}    % \SI{3.4}{\kilo\hertz}, \num{1.2e3}
+\usepackage{pdfpages}              % \includepdf für Anhänge (Paper, Laborjournal, Folien)
+\usepackage{pdflscape}             % Querformat: \begin{landscape}...\end{landscape}
+\usepackage{pgfgantt}              % Gantt-Diagramm für den Arbeitsplan
+\usepackage{environ}
+\usepackage[savepos,abspage]{zref}
+\usepackage[hidelinks]{hyperref}   % klickbare Verweise; zuletzt laden
+
+%% Zitierregel (Marti): bei Journalartikeln DOI angeben, aber keine Webadresse.
+%% -> url/urldate werden bei @article automatisch unterdrückt.
+\AtEveryBibitem{%
+  \ifentrytype{article}{\clearfield{url}\clearfield{urlyear}%
+    \clearfield{urlmonth}\clearfield{urlday}}{}}
+
+%% Kopf- und Fußzeile wie offizielles Gerüst (\ohead wird in der Hauptdatei gesetzt)
+\pagestyle{scrheadings}
+\ihead{\thepage}
+\ofoot{\pagemark}
+\ifoot{\zubearbeiten{\IhrName}}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Teil 3: Hilfsmakros %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\makeatletter
+
+%% --- offizieller Farbschalter (Zeile 12-15 der Gerüste), automatisch per Modus
+\ifAbgabe
+  \Hinweisefalse
+  \newcommand{\zubearbeiten}[1]{\textcolor{black}{#1}}
+\else
+  \newcommand{\zubearbeiten}[1]{\textcolor{darkgreen}{#1}}
+\fi
+
+%% --- Grüne Hilfstexte: verschwinden im Abgabemodus vollständig
+%%     \begin{hinweise} ... \end{hinweise}   (darf itemize enthalten)
+%%     \hinweis{kurzer Text}
+\NewEnviron{hinweise}{\ifHinweise\par{\color{darkgreen}\small\BODY\par}\fi}
+\newcommand{\hinweis}[1]{\ifHinweise\par{\color{darkgreen}\small #1\par}\fi}
+
+%% --- Platzhalter für eigenen Text: bleibt IMMER rot sichtbar (auch im
+%%     Abgabemodus), damit nichts Unfertiges abgegeben wird.
+\newcounter{platzhalter}
+\DeclareRobustCommand{\platzhalter}[1]{%
+  \stepcounter{platzhalter}%
+  \textcolor{red}{\textbf{[}\,#1\,\textbf{]}}%
+  \ifAbgabe\PackageWarning{Portfolio}{Platzhalter noch vorhanden: #1}\fi}
+\AtEndDocument{%
+  \ifnum\value{platzhalter}>0
+    \PackageWarningNoLine{Portfolio}{Es sind noch \theplatzhalter\space
+      Platzhalter im Dokument!}%
+  \fi
+  \immediate\write\@auxout{\string\gdef\string\pf@platzhalteralt{\theplatzhalter}}}
+\providecommand{\pf@platzhalteralt}{?}
+
+%% --- Umfangsmessung
+%%   \begin{umfang}{Bezeichnung}{min}{max} ... \end{umfang}
+%%   misst die Länge des eingeschlossenen Textes in Seiten (über die
+%%   Position auf der Seite, auf 0.05 Seiten genau) und zeigt sie im Entwurf
+%%   in einem Kasten an. Achtung: Abbildungen/Tabellen zählen nach den Regeln
+%%   NICHT zur Länge, werden hier aber mitgemessen -> dann abziehen.
+\zref@addprop{savepos}{abspage}
+\newcounter{pf@umfang}
+\newcommand*{\pf@umfangliste}{}
+\newcommand*{\pf@umfangeintrag}[4]{% Name, min, max, ist
+  \g@addto@macro\pf@umfangliste{\pf@umfangzeile{#1}{#2}{#3}{#4}}}
+\newcommand*{\pf@setfarbe}[3]{% min max ist -> \pf@farbe
+  \def\pf@farbe{darkgreen}%
+  \ifdim #3pt<#1pt \def\pf@farbe{red}\fi
+  \ifdim #3pt>#2pt \def\pf@farbe{red}\fi}
+\newcommand*{\pf@umfangzeile}[4]{%
+  #1 & #2 -- #3 & \pf@setfarbe{#2}{#3}{#4}\textcolor{\pf@farbe}{\textbf{#4}}\\}
+\newenvironment{umfang}[3]{%
+  \stepcounter{pf@umfang}%
+  \edef\pf@uid{pfumf\the\value{pf@umfang}}%
+  \def\pf@uname{#1}\def\pf@umin{#2}\def\pf@umax{#3}%
+  \par\zsavepos{\pf@uid a}\nobreak
+}{%
+  \par\zsavepos{\pf@uid e}%
+  \ifAbgabe\else
+    \zref@refused{\pf@uid a}\zref@refused{\pf@uid e}%
+    \edef\pf@ist{\fpeval{round(
+        (\zref@extractdefault{\pf@uid e}{abspage}{0}
+        -\zref@extractdefault{\pf@uid a}{abspage}{0})
+        +(\zref@extractdefault{\pf@uid a}{posy}{0}
+        -\zref@extractdefault{\pf@uid e}{posy}{0})/\number\textheight ,2)}}%
+    \protected@write\@auxout{}{\string\pf@umfangeintrag{\pf@uname}{\pf@umin}{\pf@umax}{\pf@ist}}%
+    \par\smallskip\noindent
+    \pf@setfarbe{\pf@umin}{\pf@umax}{\pf@ist}%
+    \fcolorbox{\pf@farbe}{white}{\scriptsize
+      Umfang \emph{\pf@uname}: $\approx$\,\pf@ist~Seiten
+      (Soll: \pf@umin\,--\,\pf@umax~Seiten, ohne Titel/Abb./Tab./Legenden)}%
+    \par\smallskip
+  \fi}
+
+%% --- Kontrollseite (nur im Entwurf; ersetzt das grüne Kapitel
+%%     "Hinweise zur Arbeit mit dieser Datei", das abgegeben nicht vorkommen darf)
+\newcommand{\kontrollseite}{%
+  \ifAbgabe\else
+  \chapter*{Kontrollseite (erscheint nur im Entwurf)}
+  {\color{darkgreen}
+  Modus: \textbf{Entwurf}. Für die Abgabe in \texttt{einstellungen.tex}
+  \texttt{\textbackslash Abgabetrue} setzen. Dann wird alles Grüne schwarz bzw.\
+  entfernt (Regel: \enquote{Abgaben mit grüner Farbe oder stehen gebliebenen
+  Hilfen ergeben einen Abzug}).\par\medskip
+  \textbf{Offene Platzhalter} (letzter Durchlauf): \pf@platzhalteralt\par\medskip
+  \textbf{Umfangskontrolle} (Werte aus dem letzten Kompilierdurchlauf;
+  Hilfstexte stehen außerhalb der Messung):\par\smallskip
+  \ifx\pf@umfangliste\@empty
+    \emph{noch keine Messwerte -- nochmals kompilieren.}
+  \else
+    {\small\begin{tabular}{p{0.55\textwidth}cc}
+      \toprule Teil & Soll [Seiten] & Ist [Seiten]\\\midrule
+      \pf@umfangliste
+      \bottomrule
+    \end{tabular}}
+  \fi\par\medskip
+  \input{kapitel/checkliste}
+  }%
+  \fi}
+\providecommand{\enquote}[1]{\glqq #1\grqq}
+
+%% --- Anhang aus PDF mit durchgehenden Seitenzahlen (Regel: "Die Arbeit ist
+%%     durchgängig mit Seitenzahlen versehen ... auch der Anhänge")
+%%   \anhangpdf{Kapiteltitel}{label}{datei.pdf}           alle Seiten
+%%   \anhangpdf[pages={1-3}]{Kapiteltitel}{label}{datei.pdf}
+%%   Die Kapitelüberschrift steht auf einer eigenen Seite, danach folgen die
+%%   PDF-Seiten (auf 82 % verkleinert, damit Kopf-/Fußzeile frei bleiben).
+\newcommand{\anhangpdf}[4][pages=-]{%
+  \chapter{#2}\label{#3}%
+  \includepdf[#1,scale=0.82,pagecommand={\thispagestyle{scrheadings}}]{#4}}
+%% Gleiches ohne neues Kapitel (für weitere PDFs im selben Anhang)
+\newcommand{\pdfseiten}[2][pages=-]{%
+  \includepdf[#1,scale=0.82,pagecommand={\thispagestyle{scrheadings}}]{#2}}
+
+\makeatother
+
+%% Antwortfeld im Motivationsformular (Anhang der Endabgabe)
+\newcommand{\antwort}[1]{\par\smallskip #1\par\bigskip}

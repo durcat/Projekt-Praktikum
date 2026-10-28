@@ -1,0 +1,53 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%  EINSTELLUNGEN – die einzige Datei, in der du deine Angaben einträgst.
+%%  Wird von ALLEN Hauptdateien (Endabgabe + Zwischenabgaben) eingelesen.
+%%  Entspricht dem Block "Die Angaben" der offiziellen Gerüste
+%%  pp-portfolio-geruest-2026-2027.tex / pp-portfolio-geruest-einlage-2026-2027.tex
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Die Angaben %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newcommand{\Semester}{WH 2026-2027}
+\newcommand{\Projekt}{Dynamik Keltischer Wackelsteine}   % Titel laut Themenliste WS 26/27
+%% Schwerpunkt abgeleitet aus der Aufgabenverteilung im Arbeitsplan (1.4 Bewegungsgleichungen,
+%% 1.6 Simulation Umkehrdynamik, 2.1.3/2.1.4 Firmware + Kalibrierung, 5.1 Datenpipeline) – prüfen!
+\newcommand{\Schwerpunkt}{Bewegungsgleichungen und numerische Simulation der Spin-Umkehr}
+\newcommand{\SchwerpunktKurz}{Simulation der Spin-Umkehr}        % kurze Form für die Kopfzeile
+\newcommand{\IhrName}{Kristijan Manevski}                         % Vorname Nachname
+\newcommand{\Matrikelnummer}{\platzhalter{Matrikelnummer}}
+\newcommand{\Studiengang}{\platzhalter{Studiengang + Semester}}   % z.B. Physik B.Sc., 5. Semester
+\newcommand{\emailAdresse}{\platzhalter{Uni-E-Mail-Adresse (\dots @uni-ulm.de)}}
+%% Abgabedatum: jede Zwischenabgabe-Hauptdatei setzt ihr eigenes \dasDatum (Moodle-Frist);
+%% ohne Vorgabe gilt das Datum der Endabgabe.
+\providecommand{\dasDatum}{15.\,03.\,2027}
+
+%% Weitere Angaben, die in mehreren Einlagen gebraucht werden
+\newcommand{\Partner}{Janosch Lustig}                             % für Abgrenzung der Schwerpunkte
+%% laut Titelseite von Janoschs Arbeitsplan-Abgabe (28.10.2026)
+\newcommand{\PartnerSchwerpunkt}{Umkehrzeit und Parameterabhängigkeit}
+\newcommand{\Laborbuchlink}{https://link-zum-elektronischen-laborjournal}  % Pflicht in Einlage 3!
+%% Einlage 3: ein Praktikumstag (Do 10--12 Uhr, O26/233 bzw. O26/234), ≠ Tag von Janosch.
+%% Termine: 15.10., 22.10., 29.10., 05.11., 12.11., 19.11., 26.11., 03.12., 10.12., 17.12.2026,
+%%          14.01., 21.01., 28.01., 04.02., 11.02.2027 (Abgabe Protokoll: 09.12.2026)
+\newcommand{\Protokolldatum}{TT.MM.2026}
+\newcommand{\PaperKey}{KondoNakanishi2017}      % Einlage 2: Kondo & Nakanishi, Phys. Rev. E 95, 062207
+\newcommand{\Vortragsdatum}{28.\,01.\,2027}      % Einlage 5
+\newcommand{\FremdVortragKey}{VORLAGE-Vortrag}  % Einlage 6: bib-Key des anderen Vortrags
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%  MODUS-SCHALTER
+%%
+%%  \Abgabefalse  = Entwurf: grüne Hilfen sichtbar, Kontrollseite mit
+%%                  Umfangsmessung, Platzhalter rot markiert.
+%%  \Abgabetrue   = Abgabe: grüne Farbe -> schwarz (wie offizielle Zeile 15/16),
+%%                  alle Hilfen + Kontrollseite + Umfangsboxen verschwinden.
+%%                  Übrig gebliebene \platzhalter{} bleiben ROT sichtbar und
+%%                  erzeugen eine Warnung -> dann ist noch etwas offen!
+%%
+%%  \Hinweisefalse blendet im Entwurf nur die grünen Hilfstexte aus
+%%                  (nützlich, um den Umfang realistisch zu messen).
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newif\ifAbgabe
+\newif\ifHinweise
+
+\Abgabefalse      % <-- für die Abgabe auf \Abgabetrue setzen
+\Hinweisetrue     % <-- Hilfstexte im Entwurf ein-/ausblenden
